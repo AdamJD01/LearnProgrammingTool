@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LearnProgrammingTool
 {
-    public partial class Form1 : Form
+    public partial class frmLogic : Form
     {
-        public Form1()
+        public frmLogic()
         {
             InitializeComponent();
         }

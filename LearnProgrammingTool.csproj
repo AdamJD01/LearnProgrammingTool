@@ -46,16 +46,109 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Advanced.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Advanced.Designer.cs">
+      <DependentUpon>Advanced.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calculation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calculation.Designer.cs">
+      <DependentUpon>Calculation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cases.Designer.cs">
+      <DependentUpon>Cases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="If Statements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="If Statements.Designer.cs">
+      <DependentUpon>If Statements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Input and Output.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Input and Output.Designer.cs">
+      <DependentUpon>Input and Output.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Introduction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Introduction.Designer.cs">
+      <DependentUpon>Introduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logic.Designer.cs">
+      <DependentUpon>Logic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loops.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loops.Designer.cs">
+      <DependentUpon>Loops.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Recap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recap.Designer.cs">
+      <DependentUpon>Recap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Validation.Designer.cs">
+      <DependentUpon>Validation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Variables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Variables.Designer.cs">
+      <DependentUpon>Variables.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Advanced.resx">
+      <DependentUpon>Advanced.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calculation.resx">
+      <DependentUpon>Calculation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cases.resx">
+      <DependentUpon>Cases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="If Statements.resx">
+      <DependentUpon>If Statements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Input and Output.resx">
+      <DependentUpon>Input and Output.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Introduction.resx">
+      <DependentUpon>Introduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logic.resx">
+      <DependentUpon>Logic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loops.resx">
+      <DependentUpon>Loops.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +159,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Recap.resx">
+      <DependentUpon>Recap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Validation.resx">
+      <DependentUpon>Validation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Variables.resx">
+      <DependentUpon>Variables.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
