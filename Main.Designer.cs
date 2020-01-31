@@ -70,6 +70,7 @@
             this.ClientSize = new System.Drawing.Size(514, 161);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbMain);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmMain";
             this.Text = "Learn VB Tool";
             this.ResumeLayout(false);

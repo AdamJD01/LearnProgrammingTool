@@ -5,51 +5,83 @@ namespace LearnProgrammingTool
 {
     public partial class frmVariables : Form
     {
-        private int scoreAnswer1;
-        private int scoreAnswer2;
+        private int scoreAnswer;
         private int finalScore;
 
         public frmVariables()
         {
             InitializeComponent();
             MaximizeBox = false; //stop the user making the form larger
+            grpVariableQuestion1.Visible = true;
         }
 
-        private void btnNextQuestion1_Click(object sender, EventArgs e)
+        private void btnVariableQuestion1_Click(object sender, EventArgs e)
         {
             //TO DO: For now this is hard coded but in future the options for the combo boxes will need to be connected to a database
 
             //validation
-            if (cmbQuestion1.SelectedIndex < 0 || cmbQuestion2.SelectedIndex < 0)
+            if (cmbVariableQuestion1.SelectedIndex < 0)
             {
                 MessageBox.Show("Please choose an option");
-                scoreAnswer1 = 0;
-                scoreAnswer2 = 0;
+                grpVariableQuestion1.Visible = true;
+                grpVariableQuestion2.Visible = false;
             }
 
             //calculation
-            else if (cmbQuestion1.SelectedItem.Equals("String") && cmbQuestion2.SelectedItem.Equals("Boolean"))
+            else if (cmbVariableQuestion1.SelectedItem.Equals("String")) 
             {
-                scoreAnswer1 = 1;
-                scoreAnswer2 = 1;
+                scoreAnswer = 1;
+                finalScore = scoreAnswer;
+                grpVariableQuestion1.Visible = false;
+                grpVariableQuestion2.Visible = true;
             }
 
-            else if (cmbQuestion1.SelectedItem.Equals("String") || cmbQuestion2.SelectedItem.Equals("Boolean"))
+            else
             {
-                scoreAnswer1 = 1;
-                scoreAnswer2 = 0;
+                scoreAnswer = 0;
+                finalScore = scoreAnswer;
+                grpVariableQuestion1.Visible = false;
+                grpVariableQuestion2.Visible = true;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //TO DO: For now this is hard coded but in future the options for the combo boxes will need to be connected to a database
+
+            //validation
+            if (cmbVariableQuestion1.SelectedIndex < 0)
+            {
+                MessageBox.Show("Please choose an option");
+                grpVariableQuestion2.Visible = true;
+                //grpVariableQuestion3.Visible = false;
+                grpVariableScore.Visible = false; //for testing
             }
 
-            else 
+            //calculation
+            else if (cmbVariableQuestion1.SelectedItem.Equals("Boolean"))
             {
-                scoreAnswer1 = 0;
-                scoreAnswer2 = 0;
+                scoreAnswer += 1;
+                finalScore += scoreAnswer;
+                grpVariableQuestion2.Visible = false;
+                //grpVariableQuestion3.Visible = true;
+
+                //for testing
+                grpVariableScore.Visible = true;
+                txtScore.Text = finalScore.ToString();
             }
 
-            finalScore = scoreAnswer1 + scoreAnswer2;
+            else
+            {
+                scoreAnswer += 0;
+                finalScore += scoreAnswer;
+                grpVariableQuestion2.Visible = false;
+                //grpVariableQuestion3.Visible = true;
 
-            //output
-            txtScore.Text = finalScore.ToString();
+                //for testing
+                grpVariableScore.Visible = true;
+                txtScore.Text = finalScore.ToString();
+            }
         }
     }
 }
