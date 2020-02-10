@@ -64,6 +64,11 @@
     <Compile Include="Cases.Designer.cs">
       <DependentUpon>Cases.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExercisesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExercisesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="If Statements.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +173,17 @@
     <EmbeddedResource Include="Variables.resx">
       <DependentUpon>Variables.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ExercisesDataSet.xsc">
+      <DependentUpon>ExercisesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ExercisesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ExercisesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ExercisesDataSet.xss">
+      <DependentUpon>ExercisesDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -180,6 +196,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Exercises.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

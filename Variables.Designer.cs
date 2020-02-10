@@ -28,29 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label questionLabel;
+            System.Windows.Forms.Label answerLabel;
+            System.Windows.Forms.Label label1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVariables));
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtScore = new System.Windows.Forms.TextBox();
             this.cmbQuestion2 = new System.Windows.Forms.ComboBox();
             this.grpQuestion2 = new System.Windows.Forms.Label();
-            this.grpVariableScore = new System.Windows.Forms.GroupBox();
-            //this.btnBackScore = new System.Windows.Forms.Button();
-            this.txtShowResult = new System.Windows.Forms.TextBox();
-            this.grpVariableQuestion2 = new System.Windows.Forms.GroupBox();
-            //this.btnBackVariableQuestion2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.btnNextVariableQuestion2 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.grpVariableQuestion1 = new System.Windows.Forms.GroupBox();
-            this.cmbVariableQuestion1 = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btnNextVariableQuestion1 = new System.Windows.Forms.Button();
-            this.grpVariableScore.SuspendLayout();
-            this.grpVariableQuestion2.SuspendLayout();
-            this.grpVariableQuestion1.SuspendLayout();
+            this.exercisesDataSet = new LearnProgrammingTool.ExercisesDataSet();
+            this.variables_QuestionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.variables_QuestionsTableAdapter = new LearnProgrammingTool.ExercisesDataSetTableAdapters.Variables_QuestionsTableAdapter();
+            this.tableAdapterManager = new LearnProgrammingTool.ExercisesDataSetTableAdapters.TableAdapterManager();
+            this.variables_QuestionsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.variables_QuestionsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.questionTextBox = new System.Windows.Forms.TextBox();
+            this.variables_AnswersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.variables_AnswersTableAdapter = new LearnProgrammingTool.ExercisesDataSetTableAdapters.Variables_AnswersTableAdapter();
+            this.answerTextBox = new System.Windows.Forms.TextBox();
+            this.cmbQuestion1 = new System.Windows.Forms.ComboBox();
+            this.btnQuestion1 = new System.Windows.Forms.Button();
+            this.txtScore = new System.Windows.Forms.TextBox();
+            questionLabel = new System.Windows.Forms.Label();
+            answerLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.exercisesDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.variables_QuestionsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.variables_QuestionsBindingNavigator)).BeginInit();
+            this.variables_QuestionsBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.variables_AnswersBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // questionLabel
+            // 
+            questionLabel.AutoSize = true;
+            questionLabel.Location = new System.Drawing.Point(12, 59);
+            questionLabel.Name = "questionLabel";
+            questionLabel.Size = new System.Drawing.Size(77, 20);
+            questionLabel.TabIndex = 1;
+            questionLabel.Text = "Question:";
+            // 
+            // answerLabel
+            // 
+            answerLabel.AutoSize = true;
+            answerLabel.Location = new System.Drawing.Point(246, 59);
+            answerLabel.Name = "answerLabel";
+            answerLabel.Size = new System.Drawing.Size(66, 20);
+            answerLabel.TabIndex = 3;
+            answerLabel.Text = "Answer:";
+            answerLabel.Visible = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(12, 103);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(68, 20);
+            label1.TabIndex = 6;
+            label1.Text = "Options:";
             // 
             // label3
             // 
@@ -61,24 +104,6 @@
             this.label3.Size = new System.Drawing.Size(250, 22);
             this.label3.TabIndex = 4;
             this.label3.Text = "Dim isItRaining As _________";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(164, 58);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 22);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Score   =";
-            // 
-            // txtScore
-            // 
-            this.txtScore.Location = new System.Drawing.Point(277, 57);
-            this.txtScore.Name = "txtScore";
-            this.txtScore.ReadOnly = true;
-            this.txtScore.Size = new System.Drawing.Size(52, 26);
-            this.txtScore.TabIndex = 7;
             // 
             // cmbQuestion2
             // 
@@ -105,214 +130,235 @@
             this.grpQuestion2.TabIndex = 9;
             this.grpQuestion2.Text = "Variable Types";
             // 
-            // grpVariableScore
+            // exercisesDataSet
             // 
-            //this.grpVariableScore.Controls.Add(this.btnBackScore);
-            this.grpVariableScore.Controls.Add(this.txtShowResult);
-            this.grpVariableScore.Controls.Add(this.txtScore);
-            this.grpVariableScore.Controls.Add(this.label4);
-            this.grpVariableScore.Location = new System.Drawing.Point(32, 21);
-            this.grpVariableScore.Name = "grpVariableScore";
-            this.grpVariableScore.Size = new System.Drawing.Size(463, 215);
-            this.grpVariableScore.TabIndex = 13;
-            this.grpVariableScore.TabStop = false;
-            this.grpVariableScore.Text = "Score";
-            this.grpVariableScore.Visible = false;
+            this.exercisesDataSet.DataSetName = "ExercisesDataSet";
+            this.exercisesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // btnBackScore
+            // variables_QuestionsBindingSource
             // 
-            /*
-            this.btnBackScore.Location = new System.Drawing.Point(11, 132);
-            this.btnBackScore.Name = "btnBackScore";
-            this.btnBackScore.Size = new System.Drawing.Size(163, 44);
-            this.btnBackScore.TabIndex = 24;
-            this.btnBackScore.Text = "Back";
-            this.btnBackScore.UseVisualStyleBackColor = true;
-            this.btnBackScore.Click += new System.EventHandler(this.btnBackScore_Click);
-            */
+            this.variables_QuestionsBindingSource.DataMember = "Variables_Questions";
+            this.variables_QuestionsBindingSource.DataSource = this.exercisesDataSet;
             // 
-            // txtShowResult
+            // variables_QuestionsTableAdapter
             // 
-            this.txtShowResult.Location = new System.Drawing.Point(281, 141);
-            this.txtShowResult.Name = "txtShowResult";
-            this.txtShowResult.ReadOnly = true;
-            this.txtShowResult.Size = new System.Drawing.Size(158, 26);
-            this.txtShowResult.TabIndex = 8;
+            this.variables_QuestionsTableAdapter.ClearBeforeFill = true;
             // 
-            // grpVariableQuestion2
+            // tableAdapterManager
             // 
-            //this.grpVariableQuestion2.Controls.Add(this.btnBackVariableQuestion2);
-            this.grpVariableQuestion2.Controls.Add(this.label1);
-            this.grpVariableQuestion2.Controls.Add(this.comboBox3);
-            this.grpVariableQuestion2.Controls.Add(this.btnNextVariableQuestion2);
-            this.grpVariableQuestion2.Controls.Add(this.label7);
-            this.grpVariableQuestion2.Location = new System.Drawing.Point(32, 21);
-            this.grpVariableQuestion2.Name = "grpVariableQuestion2";
-            this.grpVariableQuestion2.Size = new System.Drawing.Size(463, 215);
-            this.grpVariableQuestion2.TabIndex = 14;
-            this.grpVariableQuestion2.TabStop = false;
-            this.grpVariableQuestion2.Text = "Question2";
-            this.grpVariableQuestion2.Visible = false;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.UpdateOrder = LearnProgrammingTool.ExercisesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.Variables_AnswersTableAdapter = null;
+            this.tableAdapterManager.Variables_QuestionsTableAdapter = this.variables_QuestionsTableAdapter;
             // 
-            // btnBackVariableQuestion2
+            // variables_QuestionsBindingNavigator
             // 
-            /*
-            this.btnBackVariableQuestion2.Location = new System.Drawing.Point(10, 138);
-            this.btnBackVariableQuestion2.Name = "btnBackVariableQuestion2";
-            this.btnBackVariableQuestion2.Size = new System.Drawing.Size(163, 44);
-            this.btnBackVariableQuestion2.TabIndex = 25;
-            this.btnBackVariableQuestion2.Text = "Back";
-            this.btnBackVariableQuestion2.UseVisualStyleBackColor = true;
-            this.btnBackVariableQuestion2.Click += new System.EventHandler(this.btnBackVariableQuestion2_Click_1);
-            */
+            this.variables_QuestionsBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.variables_QuestionsBindingNavigator.BindingSource = this.variables_QuestionsBindingSource;
+            this.variables_QuestionsBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.variables_QuestionsBindingNavigator.DeleteItem = null;
+            this.variables_QuestionsBindingNavigator.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.variables_QuestionsBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.variables_QuestionsBindingNavigatorSaveItem});
+            this.variables_QuestionsBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.variables_QuestionsBindingNavigator.MoveFirstItem = null;
+            this.variables_QuestionsBindingNavigator.MoveLastItem = null;
+            this.variables_QuestionsBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.variables_QuestionsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.variables_QuestionsBindingNavigator.Name = "variables_QuestionsBindingNavigator";
+            this.variables_QuestionsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.variables_QuestionsBindingNavigator.Size = new System.Drawing.Size(248, 33);
+            this.variables_QuestionsBindingNavigator.TabIndex = 0;
+            this.variables_QuestionsBindingNavigator.Text = "bindingNavigator1";
             // 
-            // label1
+            // bindingNavigatorAddNewItem
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(158, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 22);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Variable Types";
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
-            // comboBox3
+            // bindingNavigatorCountItem
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
+            // 
+            // variables_QuestionsBindingNavigatorSaveItem
+            // 
+            this.variables_QuestionsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.variables_QuestionsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("variables_QuestionsBindingNavigatorSaveItem.Image")));
+            this.variables_QuestionsBindingNavigatorSaveItem.Name = "variables_QuestionsBindingNavigatorSaveItem";
+            this.variables_QuestionsBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 28);
+            this.variables_QuestionsBindingNavigatorSaveItem.Text = "Save Data";
+            this.variables_QuestionsBindingNavigatorSaveItem.Click += new System.EventHandler(this.variables_QuestionsBindingNavigatorSaveItem_Click);
+            // 
+            // questionTextBox
+            // 
+            this.questionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.variables_QuestionsBindingSource, "Question", true));
+            this.questionTextBox.Location = new System.Drawing.Point(95, 56);
+            this.questionTextBox.Name = "questionTextBox";
+            this.questionTextBox.ReadOnly = true;
+            this.questionTextBox.Size = new System.Drawing.Size(121, 26);
+            this.questionTextBox.TabIndex = 2;
+            // 
+            // variables_AnswersBindingSource
+            // 
+            this.variables_AnswersBindingSource.DataMember = "Variables_Answers";
+            this.variables_AnswersBindingSource.DataSource = this.exercisesDataSet;
+            // 
+            // variables_AnswersTableAdapter
+            // 
+            this.variables_AnswersTableAdapter.ClearBeforeFill = true;
+            // 
+            // answerTextBox
+            // 
+            this.answerTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.variables_AnswersBindingSource, "Answer", true));
+            this.answerTextBox.Location = new System.Drawing.Point(318, 56);
+            this.answerTextBox.Name = "answerTextBox";
+            this.answerTextBox.Size = new System.Drawing.Size(100, 26);
+            this.answerTextBox.TabIndex = 4;
+            this.answerTextBox.Visible = false;
+            // 
+            // cmbQuestion1
+            // 
+            this.cmbQuestion1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbQuestion1.FormattingEnabled = true;
+            this.cmbQuestion1.Items.AddRange(new object[] {
             "Boolean",
-            "Date",
             "Double",
             "Single",
             "String"});
-            this.comboBox3.Location = new System.Drawing.Point(280, 80);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(158, 28);
-            this.comboBox3.TabIndex = 11;
+            this.cmbQuestion1.Location = new System.Drawing.Point(95, 100);
+            this.cmbQuestion1.Name = "cmbQuestion1";
+            this.cmbQuestion1.Size = new System.Drawing.Size(121, 28);
+            this.cmbQuestion1.TabIndex = 5;
             // 
-            // btnNextVariableQuestion2
+            // btnQuestion1
             // 
-            this.btnNextVariableQuestion2.Location = new System.Drawing.Point(270, 138);
-            this.btnNextVariableQuestion2.Name = "btnNextVariableQuestion2";
-            this.btnNextVariableQuestion2.Size = new System.Drawing.Size(163, 44);
-            this.btnNextVariableQuestion2.TabIndex = 3;
-            this.btnNextVariableQuestion2.Text = "Next";
-            this.btnNextVariableQuestion2.UseVisualStyleBackColor = true;
-            this.btnNextVariableQuestion2.Click += new System.EventHandler(this.button3_Click);
+            this.btnQuestion1.Location = new System.Drawing.Point(80, 158);
+            this.btnQuestion1.Name = "btnQuestion1";
+            this.btnQuestion1.Size = new System.Drawing.Size(121, 52);
+            this.btnQuestion1.TabIndex = 7;
+            this.btnQuestion1.Text = "Next";
+            this.btnQuestion1.UseVisualStyleBackColor = true;
+            this.btnQuestion1.Click += new System.EventHandler(this.btnQuestion1_Click);
             // 
-            // label7
+            // txtScore
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 80);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(250, 22);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Dim isItRaining As _________";
-            // 
-            // grpVariableQuestion1
-            // 
-            this.grpVariableQuestion1.Controls.Add(this.cmbVariableQuestion1);
-            this.grpVariableQuestion1.Controls.Add(this.label12);
-            this.grpVariableQuestion1.Controls.Add(this.label11);
-            this.grpVariableQuestion1.Controls.Add(this.btnNextVariableQuestion1);
-            this.grpVariableQuestion1.Location = new System.Drawing.Point(26, 21);
-            this.grpVariableQuestion1.Name = "grpVariableQuestion1";
-            this.grpVariableQuestion1.Size = new System.Drawing.Size(463, 215);
-            this.grpVariableQuestion1.TabIndex = 8;
-            this.grpVariableQuestion1.TabStop = false;
-            this.grpVariableQuestion1.Text = "Question1";
-            this.grpVariableQuestion1.Visible = false;
-            // 
-            // cmbVariableQuestion1
-            // 
-            this.cmbVariableQuestion1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbVariableQuestion1.FormattingEnabled = true;
-            this.cmbVariableQuestion1.Items.AddRange(new object[] {
-            "Boolean",
-            "Date",
-            "Double",
-            "Single",
-            "String"});
-            this.cmbVariableQuestion1.Location = new System.Drawing.Point(282, 95);
-            this.cmbVariableQuestion1.Name = "cmbVariableQuestion1";
-            this.cmbVariableQuestion1.Size = new System.Drawing.Size(158, 28);
-            this.cmbVariableQuestion1.TabIndex = 20;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(158, 32);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(145, 22);
-            this.label12.TabIndex = 18;
-            this.label12.Text = "Variable Types";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(11, 95);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(250, 22);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Dim tutorName As _________";
-            // 
-            // btnNextVariableQuestion1
-            // 
-            this.btnNextVariableQuestion1.Location = new System.Drawing.Point(140, 154);
-            this.btnNextVariableQuestion1.Name = "btnNextVariableQuestion1";
-            this.btnNextVariableQuestion1.Size = new System.Drawing.Size(163, 44);
-            this.btnNextVariableQuestion1.TabIndex = 21;
-            this.btnNextVariableQuestion1.Text = "Next";
-            this.btnNextVariableQuestion1.UseVisualStyleBackColor = true;
-            this.btnNextVariableQuestion1.Click += new System.EventHandler(this.btnVariableQuestion1_Click);
+            this.txtScore.Location = new System.Drawing.Point(80, 240);
+            this.txtScore.Name = "txtScore";
+            this.txtScore.ReadOnly = true;
+            this.txtScore.Size = new System.Drawing.Size(121, 26);
+            this.txtScore.TabIndex = 8;
             // 
             // frmVariables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(511, 275);
-            this.Controls.Add(this.grpVariableQuestion1);
-            this.Controls.Add(this.grpVariableQuestion2);
-            this.Controls.Add(this.grpVariableScore);
+            this.ClientSize = new System.Drawing.Size(248, 290);
+            this.Controls.Add(this.txtScore);
+            this.Controls.Add(this.btnQuestion1);
+            this.Controls.Add(label1);
+            this.Controls.Add(this.cmbQuestion1);
+            this.Controls.Add(answerLabel);
+            this.Controls.Add(this.answerTextBox);
+            this.Controls.Add(questionLabel);
+            this.Controls.Add(this.questionTextBox);
+            this.Controls.Add(this.variables_QuestionsBindingNavigator);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmVariables";
             this.Text = "Variables";
-            this.grpVariableScore.ResumeLayout(false);
-            this.grpVariableScore.PerformLayout();
-            this.grpVariableQuestion2.ResumeLayout(false);
-            this.grpVariableQuestion2.PerformLayout();
-            this.grpVariableQuestion1.ResumeLayout(false);
-            this.grpVariableQuestion1.PerformLayout();
+            this.Load += new System.EventHandler(this.frmVariables_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.exercisesDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.variables_QuestionsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.variables_QuestionsBindingNavigator)).EndInit();
+            this.variables_QuestionsBindingNavigator.ResumeLayout(false);
+            this.variables_QuestionsBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.variables_AnswersBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtScore;
         private System.Windows.Forms.ComboBox cmbQuestion2;
         private System.Windows.Forms.Label grpQuestion2;
-        //private System.Windows.Forms.GroupBox grpVariableQuestion2;
-        //private System.Windows.Forms.Button btnNextVariableQuestion2;
-        private System.Windows.Forms.GroupBox grpVariableScore;
-        private System.Windows.Forms.TextBox txtShowResult;
-        private System.Windows.Forms.GroupBox grpVariableQuestion2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Button btnNextVariableQuestion2;
-        private System.Windows.Forms.Label label7;
-        //private System.Windows.Forms.Button btnBackVariableQuestion2;
-        private System.Windows.Forms.Button btnBackScore;
-        private System.Windows.Forms.Button btnNextVariableQuestion1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox cmbVariableQuestion1;
-        private System.Windows.Forms.GroupBox grpVariableQuestion1;
-        private System.Windows.Forms.Label label1;
-        //private System.Windows.Forms.Button btnBackVariableQuestion2;
+        private ExercisesDataSet exercisesDataSet;
+        private System.Windows.Forms.BindingSource variables_QuestionsBindingSource;
+        private ExercisesDataSetTableAdapters.Variables_QuestionsTableAdapter variables_QuestionsTableAdapter;
+        private ExercisesDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingNavigator variables_QuestionsBindingNavigator;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton variables_QuestionsBindingNavigatorSaveItem;
+        private System.Windows.Forms.TextBox questionTextBox;
+        private System.Windows.Forms.BindingSource variables_AnswersBindingSource;
+        private ExercisesDataSetTableAdapters.Variables_AnswersTableAdapter variables_AnswersTableAdapter;
+        private System.Windows.Forms.TextBox answerTextBox;
+        private System.Windows.Forms.ComboBox cmbQuestion1;
+        private System.Windows.Forms.Button btnQuestion1;
+        private System.Windows.Forms.TextBox txtScore;
     }
 }
