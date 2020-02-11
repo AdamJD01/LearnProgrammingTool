@@ -15,9 +15,17 @@ namespace LearnProgrammingTool
             MaximizeBox = false; //stop the user making the form larger
         }
 
+        private void frmVariables_Load(object sender, EventArgs e)
+        {
+            variables_QuestionsTableAdapter.Fill(exercisesDataSet.Variables_Questions);
+            variables_AnswersTableAdapter.Fill(exercisesDataSet.Variables_Answers);
+        }
+
         private void btnQuestion1_Click(object sender, EventArgs e)
         {
+
             //answer = answerTextBox.Text;
+
             //validation
             if (cmbQuestion1.SelectedIndex < 0)
             {
@@ -25,7 +33,7 @@ namespace LearnProgrammingTool
             }
 
             //calculation
-            else if (cmbQuestion1.SelectedItem.Equals(answerTextBox/*"String"*/))
+            else if (cmbQuestion1.SelectedItem.Equals(/*answer*/"String"))
             {
                 scoreAnswer = 1;
                 finalScore = scoreAnswer;
@@ -111,12 +119,6 @@ namespace LearnProgrammingTool
             }
             */
         }
-        
-        private void frmVariables_Load(object sender, EventArgs e)
-        {
-            variables_QuestionsTableAdapter.Fill(exercisesDataSet.Variables_Questions);
-            variables_AnswersTableAdapter.Fill(exercisesDataSet.Variables_Answers);
-        }
 
         private void variablesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -128,6 +130,11 @@ namespace LearnProgrammingTool
             Validate();
             variables_QuestionsBindingSource.EndEdit();
             tableAdapterManager.UpdateAll(exercisesDataSet);
+        }
+
+        private void answerTextBox_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

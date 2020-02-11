@@ -175,7 +175,7 @@
             this.variables_QuestionsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.variables_QuestionsBindingNavigator.Name = "variables_QuestionsBindingNavigator";
             this.variables_QuestionsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.variables_QuestionsBindingNavigator.Size = new System.Drawing.Size(248, 33);
+            this.variables_QuestionsBindingNavigator.Size = new System.Drawing.Size(419, 33);
             this.variables_QuestionsBindingNavigator.TabIndex = 0;
             this.variables_QuestionsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -273,6 +273,7 @@
             this.answerTextBox.Size = new System.Drawing.Size(100, 26);
             this.answerTextBox.TabIndex = 4;
             this.answerTextBox.Visible = false;
+            this.answerTextBox.TextChanged += new System.EventHandler(this.answerTextBox_TextChanged);
             // 
             // cmbQuestion1
             // 
@@ -310,7 +311,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(248, 290);
+            this.ClientSize = new System.Drawing.Size(419, 290);
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.btnQuestion1);
             this.Controls.Add(label1);
