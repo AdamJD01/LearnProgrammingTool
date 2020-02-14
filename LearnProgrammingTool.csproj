@@ -64,6 +64,9 @@
     <Compile Include="Cases.Designer.cs">
       <DependentUpon>Cases.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExercisesDataSet.cs">
+      <DependentUpon>ExercisesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ExercisesDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -272,7 +272,6 @@
             this.answerTextBox.Name = "answerTextBox";
             this.answerTextBox.Size = new System.Drawing.Size(100, 26);
             this.answerTextBox.TabIndex = 4;
-            this.answerTextBox.Visible = false;
             this.answerTextBox.TextChanged += new System.EventHandler(this.answerTextBox_TextChanged);
             // 
             // cmbQuestion1

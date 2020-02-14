@@ -7,7 +7,7 @@ namespace LearnProgrammingTool
     {
         private int scoreAnswer;
         private int finalScore;
-        //private string answer;
+        private string answer;
 
         public frmVariables()
         {
@@ -23,8 +23,7 @@ namespace LearnProgrammingTool
 
         private void btnQuestion1_Click(object sender, EventArgs e)
         {
-
-            //answer = answerTextBox.Text;
+            answer = exercisesDataSet.Variables_Answers.AnswerColumn.DataType.Name; //get the value from the database
 
             //validation
             if (cmbQuestion1.SelectedIndex < 0)
@@ -33,17 +32,23 @@ namespace LearnProgrammingTool
             }
 
             //calculation
-            else if (cmbQuestion1.SelectedItem.Equals(/*answer*/"String"))
+            else if (cmbQuestion1.SelectedItem.Equals(answer)) //"string"
             {
                 scoreAnswer = 1;
-                finalScore = scoreAnswer;
+                finalScore += scoreAnswer;
+                variables_QuestionsBindingSource.MoveNext();
+                variables_AnswersBindingSource.MoveNext();
+                //answer = exercisesDataSet.Variables_Answers.AnswerColumn.Table.DataSet.DataSetName;
                 txtScore.Text = finalScore.ToString(); //for testing
             }
 
             else
             {
                 scoreAnswer = 0;
-                finalScore = scoreAnswer;
+                finalScore += scoreAnswer;
+                variables_QuestionsBindingSource.MoveNext();
+                variables_AnswersBindingSource.MoveNext();
+                //answer = exercisesDataSet.Variables_Answers.AnswerColumn.Table.DataSet.DataSetName;
                 txtScore.Text = finalScore.ToString(); //for testing
             }
         }
