@@ -42,13 +42,6 @@
             this.tableAdapterManager = new LearnProgrammingTool.ExercisesDataSetTableAdapters.TableAdapterManager();
             this.variables_QuestionsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.variables_QuestionsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.questionTextBox = new System.Windows.Forms.TextBox();
             this.variables_AnswersBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -70,7 +63,7 @@
             // questionLabel
             // 
             questionLabel.AutoSize = true;
-            questionLabel.Location = new System.Drawing.Point(12, 59);
+            questionLabel.Location = new System.Drawing.Point(53, 64);
             questionLabel.Name = "questionLabel";
             questionLabel.Size = new System.Drawing.Size(77, 20);
             questionLabel.TabIndex = 1;
@@ -79,17 +72,16 @@
             // answerLabel
             // 
             answerLabel.AutoSize = true;
-            answerLabel.Location = new System.Drawing.Point(246, 59);
+            answerLabel.Location = new System.Drawing.Point(363, 56);
             answerLabel.Name = "answerLabel";
             answerLabel.Size = new System.Drawing.Size(66, 20);
             answerLabel.TabIndex = 3;
             answerLabel.Text = "Answer:";
-            answerLabel.Visible = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(12, 103);
+            label1.Location = new System.Drawing.Point(53, 108);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(68, 20);
             label1.TabIndex = 6;
@@ -155,27 +147,20 @@
             // 
             this.variables_QuestionsBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
             this.variables_QuestionsBindingNavigator.BindingSource = this.variables_QuestionsBindingSource;
-            this.variables_QuestionsBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.variables_QuestionsBindingNavigator.CountItem = null;
             this.variables_QuestionsBindingNavigator.DeleteItem = null;
             this.variables_QuestionsBindingNavigator.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.variables_QuestionsBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.variables_QuestionsBindingNavigatorSaveItem});
             this.variables_QuestionsBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.variables_QuestionsBindingNavigator.MoveFirstItem = null;
             this.variables_QuestionsBindingNavigator.MoveLastItem = null;
-            this.variables_QuestionsBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.variables_QuestionsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.variables_QuestionsBindingNavigator.MoveNextItem = null;
+            this.variables_QuestionsBindingNavigator.MovePreviousItem = null;
             this.variables_QuestionsBindingNavigator.Name = "variables_QuestionsBindingNavigator";
-            this.variables_QuestionsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.variables_QuestionsBindingNavigator.Size = new System.Drawing.Size(303, 33);
+            this.variables_QuestionsBindingNavigator.PositionItem = null;
+            this.variables_QuestionsBindingNavigator.Size = new System.Drawing.Size(362, 33);
             this.variables_QuestionsBindingNavigator.TabIndex = 0;
             this.variables_QuestionsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -188,57 +173,9 @@
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 28);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 28);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
-            // 
             // variables_QuestionsBindingNavigatorSaveItem
             // 
+            this.variables_QuestionsBindingNavigatorSaveItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.variables_QuestionsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.variables_QuestionsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("variables_QuestionsBindingNavigatorSaveItem.Image")));
             this.variables_QuestionsBindingNavigatorSaveItem.Name = "variables_QuestionsBindingNavigatorSaveItem";
@@ -249,10 +186,10 @@
             // questionTextBox
             // 
             this.questionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.variables_QuestionsBindingSource, "Question", true));
-            this.questionTextBox.Location = new System.Drawing.Point(95, 56);
+            this.questionTextBox.Location = new System.Drawing.Point(136, 61);
             this.questionTextBox.Name = "questionTextBox";
             this.questionTextBox.ReadOnly = true;
-            this.questionTextBox.Size = new System.Drawing.Size(121, 26);
+            this.questionTextBox.Size = new System.Drawing.Size(180, 26);
             this.questionTextBox.TabIndex = 2;
             // 
             // variables_AnswersBindingSource
@@ -267,11 +204,10 @@
             // answerTextBox
             // 
             this.answerTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.variables_AnswersBindingSource, "Answer", true));
-            this.answerTextBox.Location = new System.Drawing.Point(318, 56);
+            this.answerTextBox.Location = new System.Drawing.Point(435, 53);
             this.answerTextBox.Name = "answerTextBox";
             this.answerTextBox.Size = new System.Drawing.Size(100, 26);
             this.answerTextBox.TabIndex = 4;
-            this.answerTextBox.Visible = false;
             // 
             // cmbQuestion
             // 
@@ -279,17 +215,19 @@
             this.cmbQuestion.FormattingEnabled = true;
             this.cmbQuestion.Items.AddRange(new object[] {
             "Boolean",
+            "Byte",
+            "Char",
             "Double",
             "Single",
             "String"});
-            this.cmbQuestion.Location = new System.Drawing.Point(95, 100);
+            this.cmbQuestion.Location = new System.Drawing.Point(136, 105);
             this.cmbQuestion.Name = "cmbQuestion";
-            this.cmbQuestion.Size = new System.Drawing.Size(121, 28);
+            this.cmbQuestion.Size = new System.Drawing.Size(180, 28);
             this.cmbQuestion.TabIndex = 5;
             // 
             // btnNextQuestion
             // 
-            this.btnNextQuestion.Location = new System.Drawing.Point(80, 158);
+            this.btnNextQuestion.Location = new System.Drawing.Point(126, 162);
             this.btnNextQuestion.Name = "btnNextQuestion";
             this.btnNextQuestion.Size = new System.Drawing.Size(121, 52);
             this.btnNextQuestion.TabIndex = 7;
@@ -299,7 +237,7 @@
             // 
             // txtScore
             // 
-            this.txtScore.Location = new System.Drawing.Point(80, 240);
+            this.txtScore.Location = new System.Drawing.Point(126, 252);
             this.txtScore.Name = "txtScore";
             this.txtScore.ReadOnly = true;
             this.txtScore.Size = new System.Drawing.Size(121, 26);
@@ -309,7 +247,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(303, 290);
+            this.ClientSize = new System.Drawing.Size(362, 290);
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.btnNextQuestion);
             this.Controls.Add(label1);
@@ -344,13 +282,6 @@
         private ExercisesDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator variables_QuestionsBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton variables_QuestionsBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox questionTextBox;
         private System.Windows.Forms.BindingSource variables_AnswersBindingSource;

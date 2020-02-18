@@ -7,6 +7,7 @@ namespace LearnProgrammingTool
     {
         private int scoreAnswer;
         private int finalScore;
+        private int counter;
         private string answer;
 
         public frmVariables()
@@ -19,11 +20,15 @@ namespace LearnProgrammingTool
         {
             variables_QuestionsTableAdapter.Fill(exercisesDataSet.Variables_Questions); //get the questions table from the database
             variables_AnswersTableAdapter.Fill(exercisesDataSet.Variables_Answers); //get the answers table from the database
+            //set values of ints
+            scoreAnswer = 0;
+            finalScore = 0;
+            counter = 1;
         }
 
         private void btnNextQuestion_Click(object sender, EventArgs e)
         {
-            answer = answerTextBox.Text; //get the current text in the database
+            answer = answerTextBox.Text; //get the current answer text loaded from the database
 
             //validation
             if (cmbQuestion.SelectedIndex < 0)
@@ -37,13 +42,22 @@ namespace LearnProgrammingTool
                 scoreAnswer = 1;
                 finalScore += scoreAnswer;
                 variables_QuestionsBindingSource.MoveNext(); //show next question 
-                variables_AnswersBindingSource.MoveNext(); //show next answer
+                variables_AnswersBindingSource.MoveNext(); //update next answer
+ 
+                counter++; //keep track of the button clicks
 
-                if (finalScore >= 20) //maximum questions are 20
+                for (int i = 20; i < counter; i++)
                 {
-                    finalScore = 20;
+                    counter--; //reset counter
+                    txtScore.Text = finalScore.ToString(); //show score
+
+                    finalScore = scoreAnswer; //reset score if button is clicked after showing score
+
+                    if (finalScore >= 20) //maximum final score can be 20 (in case of error somewhere)
+                    {
+                        finalScore = 20;
+                    }
                 }
-                txtScore.Text = finalScore.ToString(); //for testing
             }
 
             //user got question wrong
@@ -52,19 +66,28 @@ namespace LearnProgrammingTool
                 scoreAnswer = 0;
                 finalScore += scoreAnswer;
                 variables_QuestionsBindingSource.MoveNext(); //show next question
-                variables_AnswersBindingSource.MoveNext(); // show next answer
+                variables_AnswersBindingSource.MoveNext(); //update next answer
 
-                if (finalScore >= 20) //maximum questions are 20
+                counter++; //keep track of the button clicks
+
+                for (int i = 20; i < counter; i++)
                 {
-                    finalScore = 20;
+                    counter--; //reset counter
+                    txtScore.Text = finalScore.ToString(); //show score
+
+                    finalScore = scoreAnswer; //reset score if button is clicked after showing score
+
+                    if (finalScore >= 20) //maximum final score can be 20 (in case of error somewhere)
+                    {
+                        finalScore = 20;
+                    }
                 }
-                txtScore.Text = finalScore.ToString(); //for testing
             }
         }
 
         //OLD
         /*
-        private void btnVariableQuestion1_Click(object sender, EventArgs e)
+        private void btnVariableQuestion_Click(object sender, EventArgs e)
         {
             //TO DO: For now this is hard coded but eventually the options for the combo boxes will be connected to a database
   

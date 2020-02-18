@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Advanced.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Advanced.Designer.cs">
-      <DependentUpon>Advanced.cs</DependentUpon>
-    </Compile>
     <Compile Include="Calculation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,9 +124,6 @@
     <Compile Include="Variables.Designer.cs">
       <DependentUpon>Variables.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Advanced.resx">
-      <DependentUpon>Advanced.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Calculation.resx">
       <DependentUpon>Calculation.cs</DependentUpon>
     </EmbeddedResource>

@@ -13,8 +13,6 @@ namespace LearnProgrammingTool
 
         private void cmbMain_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //TO DO: For now this is hard coded but in future the options for the forms will need to be connected to a database
-
             switch (cmbMain.SelectedIndex)
             {
                 //show the Introduction section
@@ -79,16 +77,19 @@ namespace LearnProgrammingTool
                     frmValidation validation = new frmValidation();
                     validation.ShowDialog(this);
                     break;
-
+                
+                //UPDATE: this is now deleted
+                /*
                 //show the Advanced section
                 case 9:
                     cmbMain.SelectedItem.Equals("Advanced");
                     frmAdvanced advanced = new frmAdvanced();
                     advanced.ShowDialog(this);
                     break;
+                */
 
                 //show the Recap section
-                case 10:
+                case 9/*10*/:
                     cmbMain.SelectedItem.Equals("Recap");
                     frmRecap recap = new frmRecap();
                     recap.ShowDialog(this);
