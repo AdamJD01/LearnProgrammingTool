@@ -17,46 +17,57 @@ namespace LearnProgrammingTool
 
         private void frmVariables_Load(object sender, EventArgs e)
         {
-            variables_QuestionsTableAdapter.Fill(exercisesDataSet.Variables_Questions);
-            variables_AnswersTableAdapter.Fill(exercisesDataSet.Variables_Answers);
+            variables_QuestionsTableAdapter.Fill(exercisesDataSet.Variables_Questions); //get the questions table from the database
+            variables_AnswersTableAdapter.Fill(exercisesDataSet.Variables_Answers); //get the answers table from the database
         }
 
-        private void btnQuestion1_Click(object sender, EventArgs e)
+        private void btnNextQuestion_Click(object sender, EventArgs e)
         {
-            answer = exercisesDataSet.Variables_Answers.AnswerColumn.DataType.Name; //get the value from the database
+            answer = answerTextBox.Text; //get the current text in the database
 
             //validation
-            if (cmbQuestion1.SelectedIndex < 0)
+            if (cmbQuestion.SelectedIndex < 0)
             {
                 MessageBox.Show("Please choose an option");
             }
 
-            //calculation
-            else if (cmbQuestion1.SelectedItem.Equals(answer)) //"string"
+            //user got question right
+            else if (cmbQuestion.SelectedItem.Equals(answer)) 
             {
                 scoreAnswer = 1;
                 finalScore += scoreAnswer;
-                variables_QuestionsBindingSource.MoveNext();
-                variables_AnswersBindingSource.MoveNext();
-                //answer = exercisesDataSet.Variables_Answers.AnswerColumn.Table.DataSet.DataSetName;
+                variables_QuestionsBindingSource.MoveNext(); //show next question 
+                variables_AnswersBindingSource.MoveNext(); //show next answer
+
+                if (finalScore >= 20) //maximum questions are 20
+                {
+                    finalScore = 20;
+                }
                 txtScore.Text = finalScore.ToString(); //for testing
             }
 
+            //user got question wrong
             else
             {
                 scoreAnswer = 0;
                 finalScore += scoreAnswer;
-                variables_QuestionsBindingSource.MoveNext();
-                variables_AnswersBindingSource.MoveNext();
-                //answer = exercisesDataSet.Variables_Answers.AnswerColumn.Table.DataSet.DataSetName;
+                variables_QuestionsBindingSource.MoveNext(); //show next question
+                variables_AnswersBindingSource.MoveNext(); // show next answer
+
+                if (finalScore >= 20) //maximum questions are 20
+                {
+                    finalScore = 20;
+                }
                 txtScore.Text = finalScore.ToString(); //for testing
             }
         }
 
+        //OLD
+        /*
         private void btnVariableQuestion1_Click(object sender, EventArgs e)
         {
-            //TO DO: For now this is hard coded but in future the options for the combo boxes will need to be connected to a database
-            /*
+            //TO DO: For now this is hard coded but eventually the options for the combo boxes will be connected to a database
+  
             //validation
             if (cmbVariableQuestion1.SelectedIndex < 0)
             {
@@ -65,65 +76,41 @@ namespace LearnProgrammingTool
                 grpVariableQuestion2.Visible = false;
             }
 
-            //calculation
+            //first question
             else if (cmbVariableQuestion1.SelectedItem.Equals("String")) 
             {
                 scoreAnswer = 1;
-                finalScore = scoreAnswer;
+                finalScore += scoreAnswer;
                 grpVariableQuestion1.Visible = false;
                 grpVariableQuestion2.Visible = true;
             }
 
+            //second question
+            else if (cmbVariableQuestion2.SelectedItem.Equals("Boolean"))
+            {
+                scoreAnswer = 1;
+                finalScore += scoreAnswer;
+                grpVariableQuestion2.Visible = false;
+
+                //for testing
+                grpVariableScore.Visible = true;
+                txtScore.Text = finalScore.ToString();
+            }
+            
+            //got question wrong
             else
             {
                 scoreAnswer = 0;
-                finalScore = scoreAnswer;
+                finalScore += scoreAnswer;
                 grpVariableQuestion1.Visible = false;
-                grpVariableQuestion2.Visible = true;
-            }
-            */
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            /*
-            //TO DO: For now this is hard coded but in future the options for the combo boxes will need to be connected to a database
-
-            //validation
-            if (cmbVariableQuestion1.SelectedIndex < 0)
-            {
-                MessageBox.Show("Please choose an option");
-                grpVariableQuestion2.Visible = true;
-                //grpVariableQuestion3.Visible = false;
-                grpVariableScore.Visible = false; //for testing
-            }
-
-            //calculation
-            else if (cmbVariableQuestion1.SelectedItem.Equals("Boolean"))
-            {
-                scoreAnswer += 1;
-                finalScore += scoreAnswer;
                 grpVariableQuestion2.Visible = false;
-                //grpVariableQuestion3.Visible = true;
 
                 //for testing
                 grpVariableScore.Visible = true;
                 txtScore.Text = finalScore.ToString();
             }
-
-            else
-            {
-                scoreAnswer += 0;
-                finalScore += scoreAnswer;
-                grpVariableQuestion2.Visible = false;
-                //grpVariableQuestion3.Visible = true;
-
-                //for testing
-                grpVariableScore.Visible = true;
-                txtScore.Text = finalScore.ToString();
-            }
-            */
         }
+        */
 
         private void variablesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -135,11 +122,6 @@ namespace LearnProgrammingTool
             Validate();
             variables_QuestionsBindingSource.EndEdit();
             tableAdapterManager.UpdateAll(exercisesDataSet);
-        }
-
-        private void answerTextBox_TextChanged(object sender, EventArgs e)
-        {
-            
         }
     }
 }
