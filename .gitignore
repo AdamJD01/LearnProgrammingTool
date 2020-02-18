@@ -340,7 +340,7 @@ ASALocalRun/
 healthchecksdb
 
 # Settings files
-*.settings
+Properties/Settings.settings
 
-#Config
-*.config
+# Config
+App.config
