@@ -167,9 +167,21 @@
   <metadata name="variables_AnswersTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>344, 65</value>
   </metadata>
-  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>662, 65</value>
-  </metadata>
+  <data name="txtLearning.Text" xml:space="preserve">
+    <value>A variable is a way of declaring an object to use in a program.
+In Visual Basic the word 'Dim' is used to declare an object followed by the type. 
+When declaring an object name the 'camelCase' style is often used (making the first word lower case and all the other words starting with a captial latter.)
+
+There are a variety of object types, these are:
+- Boolean (true or false, also known as yes or no)
+- Byte (one numeric digit)
+- Char (one letter digit)
+- Double (a large number)
+- Single (a small number)
+- String (a sentence or block of text)
+
+An example of declaring a boolean is 'Dim isItSunny' </value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>120</value>
   </metadata>

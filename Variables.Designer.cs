@@ -50,8 +50,7 @@
             this.cmbQuestion = new System.Windows.Forms.ComboBox();
             this.btnNextQuestion = new System.Windows.Forms.Button();
             this.txtScore = new System.Windows.Forms.TextBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtLearning = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             questionLabel = new System.Windows.Forms.Label();
@@ -166,7 +165,7 @@
             this.variables_QuestionsBindingNavigator.MovePreviousItem = null;
             this.variables_QuestionsBindingNavigator.Name = "variables_QuestionsBindingNavigator";
             this.variables_QuestionsBindingNavigator.PositionItem = null;
-            this.variables_QuestionsBindingNavigator.Size = new System.Drawing.Size(979, 33);
+            this.variables_QuestionsBindingNavigator.Size = new System.Drawing.Size(972, 33);
             this.variables_QuestionsBindingNavigator.TabIndex = 0;
             this.variables_QuestionsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -249,29 +248,31 @@
             this.txtScore.Size = new System.Drawing.Size(121, 26);
             this.txtScore.TabIndex = 8;
             // 
-            // textBox1
+            // txtLearning
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 25);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(922, 159);
-            this.textBox1.TabIndex = 9;
+            this.txtLearning.Location = new System.Drawing.Point(21, 25);
+            this.txtLearning.Multiline = true;
+            this.txtLearning.Name = "txtLearning";
+            this.txtLearning.ReadOnly = true;
+            this.txtLearning.Size = new System.Drawing.Size(897, 178);
+            this.txtLearning.TabIndex = 9;
+            this.txtLearning.Text = resources.GetString("txtLearning.Text");
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtLearning);
             this.groupBox1.Location = new System.Drawing.Point(12, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(943, 205);
+            this.groupBox1.Size = new System.Drawing.Size(943, 223);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Learning Section";
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(246, 257);
+            this.groupBox2.Location = new System.Drawing.Point(246, 281);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(414, 283);
+            this.groupBox2.Size = new System.Drawing.Size(414, 259);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Exercise";
@@ -280,7 +281,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 603);
+            this.ClientSize = new System.Drawing.Size(972, 603);
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.btnNextQuestion);
             this.Controls.Add(label1);
@@ -327,8 +328,7 @@
         private System.Windows.Forms.ComboBox cmbQuestion;
         private System.Windows.Forms.Button btnNextQuestion;
         private System.Windows.Forms.TextBox txtScore;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtLearning;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
     }
