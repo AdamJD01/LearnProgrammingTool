@@ -50,6 +50,10 @@
             this.cmbQuestion = new System.Windows.Forms.ComboBox();
             this.btnNextQuestion = new System.Windows.Forms.Button();
             this.txtScore = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             questionLabel = new System.Windows.Forms.Label();
             answerLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
@@ -58,12 +62,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.variables_QuestionsBindingNavigator)).BeginInit();
             this.variables_QuestionsBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.variables_AnswersBindingSource)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // questionLabel
             // 
             questionLabel.AutoSize = true;
-            questionLabel.Location = new System.Drawing.Point(53, 64);
+            questionLabel.Location = new System.Drawing.Point(306, 314);
             questionLabel.Name = "questionLabel";
             questionLabel.Size = new System.Drawing.Size(77, 20);
             questionLabel.TabIndex = 1;
@@ -72,7 +77,7 @@
             // answerLabel
             // 
             answerLabel.AutoSize = true;
-            answerLabel.Location = new System.Drawing.Point(363, 56);
+            answerLabel.Location = new System.Drawing.Point(1040, 300);
             answerLabel.Name = "answerLabel";
             answerLabel.Size = new System.Drawing.Size(66, 20);
             answerLabel.TabIndex = 3;
@@ -81,7 +86,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(53, 108);
+            label1.Location = new System.Drawing.Point(306, 358);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(68, 20);
             label1.TabIndex = 6;
@@ -149,18 +154,19 @@
             this.variables_QuestionsBindingNavigator.BindingSource = this.variables_QuestionsBindingSource;
             this.variables_QuestionsBindingNavigator.CountItem = null;
             this.variables_QuestionsBindingNavigator.DeleteItem = null;
+            this.variables_QuestionsBindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.variables_QuestionsBindingNavigator.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.variables_QuestionsBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorAddNewItem,
             this.variables_QuestionsBindingNavigatorSaveItem});
-            this.variables_QuestionsBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.variables_QuestionsBindingNavigator.Location = new System.Drawing.Point(0, 570);
             this.variables_QuestionsBindingNavigator.MoveFirstItem = null;
             this.variables_QuestionsBindingNavigator.MoveLastItem = null;
             this.variables_QuestionsBindingNavigator.MoveNextItem = null;
             this.variables_QuestionsBindingNavigator.MovePreviousItem = null;
             this.variables_QuestionsBindingNavigator.Name = "variables_QuestionsBindingNavigator";
             this.variables_QuestionsBindingNavigator.PositionItem = null;
-            this.variables_QuestionsBindingNavigator.Size = new System.Drawing.Size(362, 33);
+            this.variables_QuestionsBindingNavigator.Size = new System.Drawing.Size(979, 33);
             this.variables_QuestionsBindingNavigator.TabIndex = 0;
             this.variables_QuestionsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -186,7 +192,7 @@
             // questionTextBox
             // 
             this.questionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.variables_QuestionsBindingSource, "Question", true));
-            this.questionTextBox.Location = new System.Drawing.Point(136, 61);
+            this.questionTextBox.Location = new System.Drawing.Point(389, 311);
             this.questionTextBox.Name = "questionTextBox";
             this.questionTextBox.ReadOnly = true;
             this.questionTextBox.Size = new System.Drawing.Size(180, 26);
@@ -204,7 +210,7 @@
             // answerTextBox
             // 
             this.answerTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.variables_AnswersBindingSource, "Answer", true));
-            this.answerTextBox.Location = new System.Drawing.Point(435, 53);
+            this.answerTextBox.Location = new System.Drawing.Point(1112, 297);
             this.answerTextBox.Name = "answerTextBox";
             this.answerTextBox.Size = new System.Drawing.Size(100, 26);
             this.answerTextBox.TabIndex = 4;
@@ -220,14 +226,14 @@
             "Double",
             "Single",
             "String"});
-            this.cmbQuestion.Location = new System.Drawing.Point(136, 105);
+            this.cmbQuestion.Location = new System.Drawing.Point(389, 355);
             this.cmbQuestion.Name = "cmbQuestion";
             this.cmbQuestion.Size = new System.Drawing.Size(180, 28);
             this.cmbQuestion.TabIndex = 5;
             // 
             // btnNextQuestion
             // 
-            this.btnNextQuestion.Location = new System.Drawing.Point(126, 162);
+            this.btnNextQuestion.Location = new System.Drawing.Point(379, 412);
             this.btnNextQuestion.Name = "btnNextQuestion";
             this.btnNextQuestion.Size = new System.Drawing.Size(121, 52);
             this.btnNextQuestion.TabIndex = 7;
@@ -237,17 +243,44 @@
             // 
             // txtScore
             // 
-            this.txtScore.Location = new System.Drawing.Point(126, 252);
+            this.txtScore.Location = new System.Drawing.Point(379, 502);
             this.txtScore.Name = "txtScore";
             this.txtScore.ReadOnly = true;
             this.txtScore.Size = new System.Drawing.Size(121, 26);
             this.txtScore.TabIndex = 8;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(15, 25);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(922, 159);
+            this.textBox1.TabIndex = 9;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 27);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(943, 205);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Learning Section";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(246, 257);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(414, 283);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Exercise";
+            // 
             // frmVariables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 290);
+            this.ClientSize = new System.Drawing.Size(979, 603);
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.btnNextQuestion);
             this.Controls.Add(label1);
@@ -257,6 +290,8 @@
             this.Controls.Add(questionLabel);
             this.Controls.Add(this.questionTextBox);
             this.Controls.Add(this.variables_QuestionsBindingNavigator);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmVariables";
             this.Text = "Variables";
@@ -267,6 +302,8 @@
             this.variables_QuestionsBindingNavigator.ResumeLayout(false);
             this.variables_QuestionsBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.variables_AnswersBindingSource)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,5 +327,9 @@
         private System.Windows.Forms.ComboBox cmbQuestion;
         private System.Windows.Forms.Button btnNextQuestion;
         private System.Windows.Forms.TextBox txtScore;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

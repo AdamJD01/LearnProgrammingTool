@@ -117,4 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="txtIntroduction.Text" xml:space="preserve">
+    <value>This is a tool to help you learn Visual Basic. You can go through the sections at your own pace and there is no rush to finish them. The following sections will be covered:
+
+- Variables
+- Input and Output
+- Logic
+- Calculation
+- If Statements
+- Cases
+- Loops
+- Validation
+- Recap
+
+Each section will contain a learning section and an exercise for you to try by yourself to test your knowledge. The scores are not saved so you can try again to get a perfect score.
+
+For teachers- You can add your own questions for students to answer. </value>
+  </data>
 </root>
