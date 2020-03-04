@@ -40,7 +40,7 @@
             this.txtIntroduction.Multiline = true;
             this.txtIntroduction.Name = "txtIntroduction";
             this.txtIntroduction.ReadOnly = true;
-            this.txtIntroduction.Size = new System.Drawing.Size(777, 472);
+            this.txtIntroduction.Size = new System.Drawing.Size(777, 415);
             this.txtIntroduction.TabIndex = 0;
             this.txtIntroduction.Text = resources.GetString("txtIntroduction.Text");
             // 
@@ -48,7 +48,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 515);
+            this.ClientSize = new System.Drawing.Size(802, 475);
             this.Controls.Add(this.txtIntroduction);
             this.Name = "frmIntroduction";
             this.Text = "Introduction";

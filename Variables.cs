@@ -11,7 +11,10 @@ namespace LearnProgrammingTool
         private int questionNumber;
         private int reset;
         private string progress;
+        private string notReady;
+        private string ready;
         private string answer;
+        private bool shownAnswer;
 
         public frmVariables()
         {
@@ -32,9 +35,10 @@ namespace LearnProgrammingTool
 
             //set the question progress and show current question number to the user
             //questionNumber = counter; 
-            progress = questionNumber + "" + "/20";
-
+            progress = questionNumber + "/20";
             txtQuestionNumber.Text = progress.ToString();
+
+            shownAnswer = false; //don't show answer until all the questions have been answered
         }
 
         private void btnNextQuestion_Click(object sender, EventArgs e)
@@ -59,20 +63,27 @@ namespace LearnProgrammingTool
                 counter++; //keep track of the button clicks
                 questionNumber++; //keep count of questions
 
+                //set the question progress and show current question number to the user
                 //questionNumber = counter;
-                progress = questionNumber + "" + "/20";
+                progress = questionNumber + "/20";
                 txtQuestionNumber.Text = progress.ToString();
 
                 for (int i = 20; i < counter; i++)
                 {
                     counter--; //reset counter
                     questionNumber--; //reset questions count
-                    txtScore.Text = finalScore.ToString(); //show score
 
-                    finalScore = reset; //reset score if button is clicked after showing score
+                    //let user know they can see the score when all 20 questions have been answered
+                    if (!shownAnswer)
+                    {
+                        ready = "Find out score";
+                        txtScore.Text = ready.ToString();
+                        shownAnswer = true;
+                    }
 
+                    //set the question progress and show current question number to the user
                     //questionNumber = counter;
-                    progress = questionNumber + "" + "/20";
+                    progress = questionNumber + "/20";
                     txtQuestionNumber.Text = progress.ToString();
 
                     if (finalScore >= 20) //maximum final score and question number can be 20 (in case of error somewhere)
@@ -80,14 +91,6 @@ namespace LearnProgrammingTool
                         finalScore = 20;
                         questionNumber = 20;
                     }
-
-                    /*
-                    if (questionNumber >= 20) //reset score if finished 
-                    {
-                        finalScore = reset;
-                        scoreAnswer = reset;
-                    }
-                    */
                 }
             }
 
@@ -103,20 +106,26 @@ namespace LearnProgrammingTool
                 counter++; //keep track of the button clicks
                 questionNumber++; //keep count of questions
 
+                //set the question progress and show current question number to the user
                 //questionNumber = counter;
-                progress = questionNumber + "" + "/20";
+                progress = questionNumber + "/20";
                 txtQuestionNumber.Text = progress.ToString();
 
                 for (int i = 20; i < counter; i++)
                 {
                     counter--; //reset counter
-                    questionNumber--; //rest question count
-                    txtScore.Text = finalScore.ToString(); //show score
+                    questionNumber--; //reset question count
 
-                    finalScore = reset; //reset score if button is clicked after showing score
+                    //let user know they can see the score when all 20 questions have been answered
+                    if (!shownAnswer)
+                    {
+                        ready = "Find out score";
+                        txtScore.Text = ready.ToString();
+                        shownAnswer = true;
+                    }
 
                     //questionNumber = counter;
-                    progress = questionNumber + "" + "/20";
+                    progress = questionNumber + "/20";
                     txtQuestionNumber.Text = progress.ToString();
 
                     if (finalScore >= 20) //maximum final score and question number can be 20 (in case of error somewhere)
@@ -124,17 +133,41 @@ namespace LearnProgrammingTool
                         finalScore = 20;
                         questionNumber = 20;
                     }
-
-                    /*
-                    if (questionNumber >= 20) //reset score if finished 
-                    {
-                        finalScore = reset;
-                        scoreAnswer = reset;
-                    }
-                    */
                 }
             }
         }
+
+        private void btnCheckResults_Click(object sender, EventArgs e)
+        {
+            //if all questions have been answered then show the score
+            if (counter >= 20)
+            {
+                txtScore.Text = finalScore.ToString(); //show score
+                finalScore = reset; //reset score if user clicks on button again
+            }
+
+            //if all questions have not been answered then tell the user that they haven't finished
+            else
+            {
+                notReady = "Answer all questions";
+                txtScore.Text = notReady.ToString();
+            }
+        }
+
+        //adding own questions not working right, will probably get deleted
+        /*
+        private void variablesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            Validate();
+        }
+
+        private void variables_QuestionsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            Validate();
+            variables_QuestionsBindingSource.EndEdit();
+            tableAdapterManager.UpdateAll(exercisesDataSet);
+        }
+        */
 
         //OLD
         /*
@@ -185,17 +218,5 @@ namespace LearnProgrammingTool
             }
         }
         */
-
-        private void variablesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            Validate();
-        }
-
-        private void variables_QuestionsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            Validate();
-            variables_QuestionsBindingSource.EndEdit();
-            tableAdapterManager.UpdateAll(exercisesDataSet);
-        }
     }
 }
