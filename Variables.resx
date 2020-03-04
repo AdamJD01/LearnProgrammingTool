@@ -169,18 +169,19 @@
   </metadata>
   <data name="txtLearning.Text" xml:space="preserve">
     <value>A variable is a way of declaring an object to use in a program.
-In Visual Basic the word 'Dim' is used to declare an object followed by the type. 
+In Visual Basic the word 'Dim' is used to declare an object followed by the desired name, the word 'As' and the type of variable. 
 When declaring an object name the 'camelCase' style is often used (making the first word lower case and all the other words starting with a captial latter.)
 
 There are a variety of object types, these are:
-- Boolean (true or false, also known as yes or no)
-- Byte (one numeric digit)
-- Char (one letter digit)
-- Double (a large number)
-- Single (a small number)
-- String (a sentence or block of text)
+- Boolean (true or false, also known as yes or no). An example of declaring Boolean is 'Dim isitSunny As Boolean' 
+- Byte (one numeric digit). An example of declaring a Byte is 'Dim telephoneDigit As Byte'
+- Char (one letter digit). An example of declaring a Char is 'Dim genderInital As Char'
+- Date (the day, month and year of a time in the calender). An example of declaring a Date is 'Dim customerDateOfBirth As Date'
+- Double (a large number that rounds to more than 2 decimal places). An example of declaring a Double is 'Dim massOfSun As Double'
+- Single (a small number that rounds to 2 decimal places). An example of declaring a Single is 'Dim numberofExams As Single' 
+- String (a sentence or block of text). An example of declaring a String is 'Dim customerFeedback As String'
 
-An example of declaring a boolean is 'Dim isItSunny' </value>
+Try the exercise below to test your knowledge of Variables.  </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>120</value>

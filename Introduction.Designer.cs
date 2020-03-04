@@ -34,12 +34,13 @@
             // 
             // txtIntroduction
             // 
-            this.txtIntroduction.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIntroduction.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtIntroduction.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIntroduction.Location = new System.Drawing.Point(13, 13);
             this.txtIntroduction.Multiline = true;
             this.txtIntroduction.Name = "txtIntroduction";
             this.txtIntroduction.ReadOnly = true;
-            this.txtIntroduction.Size = new System.Drawing.Size(777, 432);
+            this.txtIntroduction.Size = new System.Drawing.Size(777, 472);
             this.txtIntroduction.TabIndex = 0;
             this.txtIntroduction.Text = resources.GetString("txtIntroduction.Text");
             // 
@@ -47,7 +48,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 470);
+            this.ClientSize = new System.Drawing.Size(802, 515);
             this.Controls.Add(this.txtIntroduction);
             this.Name = "frmIntroduction";
             this.Text = "Introduction";

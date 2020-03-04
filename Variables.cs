@@ -8,6 +8,9 @@ namespace LearnProgrammingTool
         private int scoreAnswer;
         private int finalScore;
         private int counter;
+        private int questionNumber;
+        private int reset;
+        private string progress;
         private string answer;
 
         public frmVariables()
@@ -23,7 +26,15 @@ namespace LearnProgrammingTool
             //set values of ints
             scoreAnswer = 0;
             finalScore = 0;
+            reset = 0;
+            questionNumber = 1;
             counter = 1;
+
+            //set the question progress and show current question number to the user
+            //questionNumber = counter; 
+            progress = questionNumber + "" + "/20";
+
+            txtQuestionNumber.Text = progress.ToString();
         }
 
         private void btnNextQuestion_Click(object sender, EventArgs e)
@@ -37,26 +48,46 @@ namespace LearnProgrammingTool
             }
 
             //user got question right
-            else if (cmbQuestion.SelectedItem.Equals(answer)) 
+            else if (cmbQuestion.SelectedItem.Equals(answer) && counter < 20) 
             {
                 scoreAnswer = 1;
+                //reset = 0;
                 finalScore += scoreAnswer;
                 variables_QuestionsBindingSource.MoveNext(); //show next question 
                 variables_AnswersBindingSource.MoveNext(); //update next answer
  
                 counter++; //keep track of the button clicks
+                questionNumber++; //keep count of questions
+
+                //questionNumber = counter;
+                progress = questionNumber + "" + "/20";
+                txtQuestionNumber.Text = progress.ToString();
 
                 for (int i = 20; i < counter; i++)
                 {
                     counter--; //reset counter
+                    questionNumber--; //reset questions count
                     txtScore.Text = finalScore.ToString(); //show score
 
-                    finalScore = scoreAnswer; //reset score if button is clicked after showing score
+                    finalScore = reset; //reset score if button is clicked after showing score
 
-                    if (finalScore >= 20) //maximum final score can be 20 (in case of error somewhere)
+                    //questionNumber = counter;
+                    progress = questionNumber + "" + "/20";
+                    txtQuestionNumber.Text = progress.ToString();
+
+                    if (finalScore >= 20) //maximum final score and question number can be 20 (in case of error somewhere)
                     {
                         finalScore = 20;
+                        questionNumber = 20;
                     }
+
+                    /*
+                    if (questionNumber >= 20) //reset score if finished 
+                    {
+                        finalScore = reset;
+                        scoreAnswer = reset;
+                    }
+                    */
                 }
             }
 
@@ -64,23 +95,43 @@ namespace LearnProgrammingTool
             else
             {
                 scoreAnswer = 0;
+                //reset = 0;
                 finalScore += scoreAnswer;
                 variables_QuestionsBindingSource.MoveNext(); //show next question
                 variables_AnswersBindingSource.MoveNext(); //update next answer
 
                 counter++; //keep track of the button clicks
+                questionNumber++; //keep count of questions
+
+                //questionNumber = counter;
+                progress = questionNumber + "" + "/20";
+                txtQuestionNumber.Text = progress.ToString();
 
                 for (int i = 20; i < counter; i++)
                 {
                     counter--; //reset counter
+                    questionNumber--; //rest question count
                     txtScore.Text = finalScore.ToString(); //show score
 
-                    finalScore = scoreAnswer; //reset score if button is clicked after showing score
+                    finalScore = reset; //reset score if button is clicked after showing score
 
-                    if (finalScore >= 20) //maximum final score can be 20 (in case of error somewhere)
+                    //questionNumber = counter;
+                    progress = questionNumber + "" + "/20";
+                    txtQuestionNumber.Text = progress.ToString();
+
+                    if (finalScore >= 20) //maximum final score and question number can be 20 (in case of error somewhere)
                     {
                         finalScore = 20;
+                        questionNumber = 20;
                     }
+
+                    /*
+                    if (questionNumber >= 20) //reset score if finished 
+                    {
+                        finalScore = reset;
+                        scoreAnswer = reset;
+                    }
+                    */
                 }
             }
         }
