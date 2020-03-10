@@ -1,4 +1,5 @@
-﻿using System;
+﻿//the main form for chosing a section
+using System;
 using System.Windows.Forms;
 
 namespace LearnProgrammingTool

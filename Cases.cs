@@ -1,4 +1,5 @@
-﻿using System;
+﻿//the form for learning Cases section
+using System;
 using System.Windows.Forms;
 
 namespace LearnProgrammingTool

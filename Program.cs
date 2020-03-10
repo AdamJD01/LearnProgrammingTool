@@ -1,4 +1,5 @@
-﻿using System;
+﻿//the class that all the forms extend from
+using System;
 using System.Windows.Forms;
 
 namespace LearnProgrammingTool

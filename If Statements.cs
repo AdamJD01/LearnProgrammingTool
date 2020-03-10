@@ -1,4 +1,5 @@
-﻿using System;
+﻿//the form for learning If Statements section
+using System;
 using System.Windows.Forms;
 
 namespace LearnProgrammingTool

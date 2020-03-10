@@ -1,4 +1,5 @@
-﻿using System;
+﻿//the form for learning Input and Output section
+using System;
 using System.Windows.Forms;
 
 namespace LearnProgrammingTool

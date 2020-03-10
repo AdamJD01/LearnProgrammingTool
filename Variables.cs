@@ -1,4 +1,5 @@
-﻿using System;
+﻿//the form for learning Variables section
+using System;
 using System.Windows.Forms;
 
 namespace LearnProgrammingTool
@@ -64,7 +65,7 @@ namespace LearnProgrammingTool
                 scoreAnswer = 0;
             }
 
-            finalScore += scoreAnswer;
+            finalScore += scoreAnswer; //update score
             variables_QuestionsBindingSource.MoveNext(); //show next question 
             variables_AnswersBindingSource.MoveNext(); //update next answer
 

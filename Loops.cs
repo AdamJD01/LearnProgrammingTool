@@ -1,4 +1,5 @@
-﻿using System;
+﻿//the form for learning Loops section
+using System;
 using System.Windows.Forms;
 
 namespace LearnProgrammingTool
