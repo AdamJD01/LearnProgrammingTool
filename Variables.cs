@@ -49,90 +49,55 @@ namespace LearnProgrammingTool
             if (cmbQuestion.SelectedIndex < 0)
             {
                 MessageBox.Show("Please choose an option");
+                return;
             }
 
             //user got question right
             else if (cmbQuestion.SelectedItem.Equals(answer) && counter < 20) 
             {
                 scoreAnswer = 1;
-                //reset = 0;
-                finalScore += scoreAnswer;
-                variables_QuestionsBindingSource.MoveNext(); //show next question 
-                variables_AnswersBindingSource.MoveNext(); //update next answer
- 
-                counter++; //keep track of the button clicks
-                questionNumber++; //keep count of questions
-
-                //set the question progress and show current question number to the user
-                //questionNumber = counter;
-                progress = questionNumber + "/20";
-                txtQuestionNumber.Text = progress.ToString();
-
-                for (int i = 20; i < counter; i++)
-                {
-                    counter--; //reset counter
-                    questionNumber--; //reset questions count
-
-                    //let user know they can see the score when all 20 questions have been answered
-                    if (!shownAnswer)
-                    {
-                        ready = "Find out score";
-                        txtScore.Text = ready.ToString();
-                        shownAnswer = true;
-                    }
-
-                    //set the question progress and show current question number to the user
-                    //questionNumber = counter;
-                    progress = questionNumber + "/20";
-                    txtQuestionNumber.Text = progress.ToString();
-
-                    if (finalScore >= 20) //maximum final score and question number can be 20 (in case of error somewhere)
-                    {
-                        finalScore = 20;
-                        questionNumber = 20;
-                    }
-                }
             }
 
             //user got question wrong
             else
             {
                 scoreAnswer = 0;
-                //reset = 0;
-                finalScore += scoreAnswer;
-                variables_QuestionsBindingSource.MoveNext(); //show next question
-                variables_AnswersBindingSource.MoveNext(); //update next answer
+            }
 
-                counter++; //keep track of the button clicks
-                questionNumber++; //keep count of questions
+            finalScore += scoreAnswer;
+            variables_QuestionsBindingSource.MoveNext(); //show next question 
+            variables_AnswersBindingSource.MoveNext(); //update next answer
+
+            counter++; //keep track of the button clicks
+            questionNumber++; //keep count of questions
+
+            //set the question progress and show current question number to the user
+            //questionNumber = counter;
+            progress = questionNumber + "/20";
+            txtQuestionNumber.Text = progress.ToString();
+
+            for (int i = 20; i < counter; i++)
+            {
+                counter--; //reset counter
+                questionNumber--; //reset questions count
+
+                //let user know they can see the score when all 20 questions have been answered
+                if (!shownAnswer)
+                {
+                    ready = "Find out score";
+                    txtScore.Text = ready.ToString();
+                    shownAnswer = true;
+                }
 
                 //set the question progress and show current question number to the user
                 //questionNumber = counter;
                 progress = questionNumber + "/20";
                 txtQuestionNumber.Text = progress.ToString();
 
-                for (int i = 20; i < counter; i++)
+                if (finalScore >= 20) //maximum final score and question number can be 20 (in case of error somewhere)
                 {
-                    counter--; //reset counter
-                    questionNumber--; //reset question count
-
-                    //let user know they can see the score when all 20 questions have been answered
-                    if (!shownAnswer)
-                    {
-                        ready = "Find out score";
-                        txtScore.Text = ready.ToString();
-                        shownAnswer = true;
-                    }
-
-                    //questionNumber = counter;
-                    progress = questionNumber + "/20";
-                    txtQuestionNumber.Text = progress.ToString();
-
-                    if (finalScore >= 20) //maximum final score and question number can be 20 (in case of error somewhere)
-                    {
-                        finalScore = 20;
-                        questionNumber = 20;
-                    }
+                    finalScore = 20;
+                    questionNumber = 20;
                 }
             }
         }
@@ -154,7 +119,7 @@ namespace LearnProgrammingTool
             }
         }
 
-        //adding own questions not working right, will probably get deleted
+        //adding own questions not working right
         /*
         private void variablesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -166,56 +131,6 @@ namespace LearnProgrammingTool
             Validate();
             variables_QuestionsBindingSource.EndEdit();
             tableAdapterManager.UpdateAll(exercisesDataSet);
-        }
-        */
-
-        //OLD
-        /*
-        private void btnVariableQuestion_Click(object sender, EventArgs e)
-        {
-            //TO DO: For now this is hard coded but eventually the options for the combo boxes will be connected to a database
-  
-            //validation
-            if (cmbVariableQuestion1.SelectedIndex < 0)
-            {
-                MessageBox.Show("Please choose an option");
-                grpVariableQuestion1.Visible = true;
-                grpVariableQuestion2.Visible = false;
-            }
-
-            //first question
-            else if (cmbVariableQuestion1.SelectedItem.Equals("String")) 
-            {
-                scoreAnswer = 1;
-                finalScore += scoreAnswer;
-                grpVariableQuestion1.Visible = false;
-                grpVariableQuestion2.Visible = true;
-            }
-
-            //second question
-            else if (cmbVariableQuestion2.SelectedItem.Equals("Boolean"))
-            {
-                scoreAnswer = 1;
-                finalScore += scoreAnswer;
-                grpVariableQuestion2.Visible = false;
-
-                //for testing
-                grpVariableScore.Visible = true;
-                txtScore.Text = finalScore.ToString();
-            }
-            
-            //got question wrong
-            else
-            {
-                scoreAnswer = 0;
-                finalScore += scoreAnswer;
-                grpVariableQuestion1.Visible = false;
-                grpVariableQuestion2.Visible = false;
-
-                //for testing
-                grpVariableScore.Visible = true;
-                txtScore.Text = finalScore.ToString();
-            }
         }
         */
     }
