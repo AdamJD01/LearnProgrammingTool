@@ -14,7 +14,7 @@ namespace LearnProgrammingTool
         private string notReady;
         private string ready;
         private string answer;
-        private bool shownAnswer;
+        private bool canShowScore;
 
         public frmVariables()
         {
@@ -33,32 +33,32 @@ namespace LearnProgrammingTool
             questionNumber = 1;
             counter = 1;
 
-            //set the question progress and show current question number to the user
+            //set the question progress and show question number to the user
             //questionNumber = counter; 
             progress = questionNumber + "/20";
             txtQuestionNumber.Text = progress.ToString();
 
-            shownAnswer = false; //don't show answer until all the questions have been answered
+            canShowScore = false; //don't show score until all the questions have been answered
         }
 
         private void btnNextQuestion_Click(object sender, EventArgs e)
         {
             answer = answerTextBox.Text; //get the current answer text loaded from the database
 
-            //validation
+            //validation (warns user and stops user advancing if they haven't chosen an option)
             if (cmbQuestion.SelectedIndex < 0)
             {
-                MessageBox.Show("Please choose an option");
+                MessageBox.Show("Please choose an option", "Error");
                 return;
             }
 
-            //user got question right
+            //user got question right so add 1 to their score
             else if (cmbQuestion.SelectedItem.Equals(answer) && counter < 20) 
             {
                 scoreAnswer = 1;
             }
 
-            //user got question wrong
+            //user got question wrong so add nothing to their score
             else
             {
                 scoreAnswer = 0;
@@ -71,25 +71,25 @@ namespace LearnProgrammingTool
             counter++; //keep track of the button clicks
             questionNumber++; //keep count of questions
 
-            //set the question progress and show current question number to the user
+            //update the question progress and show current question number to the user
             //questionNumber = counter;
             progress = questionNumber + "/20";
             txtQuestionNumber.Text = progress.ToString();
 
             for (int i = 20; i < counter; i++)
             {
-                counter--; //reset counter
-                questionNumber--; //reset questions count
+                counter--; //stop keeping track of counter
+                questionNumber--; //stop keeping track of questions count
 
                 //let user know they can see the score when all 20 questions have been answered
-                if (!shownAnswer)
+                if (!canShowScore)
                 {
                     ready = "Find out score";
                     txtScore.Text = ready.ToString();
-                    shownAnswer = true;
+                    canShowScore = true;
                 }
 
-                //set the question progress and show current question number to the user
+                //set the final question progress and show final question number to the user
                 //questionNumber = counter;
                 progress = questionNumber + "/20";
                 txtQuestionNumber.Text = progress.ToString();
