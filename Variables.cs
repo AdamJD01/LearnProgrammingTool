@@ -27,12 +27,13 @@ namespace LearnProgrammingTool
         {
             variables_QuestionsTableAdapter.Fill(exercisesDataSet.Variables_Questions); //get the questions table from the database
             variables_AnswersTableAdapter.Fill(exercisesDataSet.Variables_Answers); //get the answers table from the database
+            
             //set values of ints
             scoreAnswer = 0;
             finalScore = 0;
             reset = 0;
+            counter = 0;
             questionNumber = 1;
-            counter = 1;
 
             //set the question progress and show question number to the user
             //questionNumber = counter; 
@@ -54,7 +55,7 @@ namespace LearnProgrammingTool
             }
 
             //user got question right so add 1 to their score
-            else if (cmbQuestion.SelectedItem.Equals(answer) && counter < 20) 
+            else if (cmbQuestion.SelectedItem.Equals(answer) && !canShowScore) 
             {
                 scoreAnswer = 1;
             }
@@ -77,7 +78,7 @@ namespace LearnProgrammingTool
             progress = questionNumber + "/20";
             txtQuestionNumber.Text = progress.ToString();
 
-            for (int i = 20; i < counter; i++)
+            for (int i = 20; i <= counter; i++)
             {
                 counter--; //stop keeping track of counter
                 questionNumber--; //stop keeping track of questions count
@@ -106,7 +107,7 @@ namespace LearnProgrammingTool
         private void btnCheckResults_Click(object sender, EventArgs e)
         {
             //if all questions have been answered then show the score
-            if (counter >= 20)
+            if (canShowScore)
             {
                 txtScore.Text = finalScore.ToString(); //show score
                 finalScore = reset; //reset score if user clicks on button again

@@ -23,6 +23,7 @@ namespace LearnProgrammingTool
 
             MaximizeBox = false; //stop the user making the form larger
 
+            //set up mouse event handlers on labels
             lblOptionA.MouseDown += new MouseEventHandler(lblOptionA_MouseDown);
             lblOptionB.MouseDown += new MouseEventHandler(lblOptionB_MouseDown);
             lblOptionC.MouseDown += new MouseEventHandler(lblOptionC_MouseDown);
@@ -30,6 +31,7 @@ namespace LearnProgrammingTool
             lblOptionE.MouseDown += new MouseEventHandler(lblOptionE_MouseDown);
             lblOptionF.MouseDown += new MouseEventHandler(lblOptionF_MouseDown);
 
+            //set up drag event on textbox
             txtAnswer.AllowDrop = true;
             txtAnswer.DragEnter += new DragEventHandler(txtAnswer_DragEnter);
             txtAnswer.DragDrop += new DragEventHandler(txtAnswer_DragDrop);
@@ -37,21 +39,24 @@ namespace LearnProgrammingTool
 
         private void frmInputAndOutput_Load(object sender, EventArgs e)
         {
-            input_Output_QuestionsTableAdapter.Fill(exercisesDataSet._Input_Output_Questions);
-            input_Output_AnswersTableAdapter.Fill(exercisesDataSet._Input_Output_Answers);
+            input_Output_QuestionsTableAdapter.Fill(exercisesDataSet._Input_Output_Questions); //get the questions table from the database
+            input_Output_AnswersTableAdapter.Fill(exercisesDataSet._Input_Output_Answers); //get the answers table from the database
 
             //set values of ints
             scoreAnswer = 0;
             finalScore = 0;
             reset = 0;
+            counter = 0;
             questionNumber = 1;
-            counter = 1;
 
             //set the question progress and show question number to the user 
             progress = questionNumber + "/20";
             txtQuestionNumber.Text = progress.ToString();
+
+            canShowScore = false; //don't show score until all the questions have been answered
         }
 
+        //DragDrop effects for labels
         private void lblOptionA_MouseDown(object sender, EventArgs e)
         {
             DoDragDrop(lblOptionA.Text, DragDropEffects.Copy);
@@ -82,11 +87,13 @@ namespace LearnProgrammingTool
             DoDragDrop(lblOptionF.Text, DragDropEffects.Copy);
         }
 
+        //DragDrop effect for textbox
         private void txtAnswer_DragEnter(object sender, DragEventArgs de)
         {
             de.Effect = DragDropEffects.Copy;
         }
 
+        //add dragged answer into the textbox
         private void txtAnswer_DragDrop(object sender, DragEventArgs de)
         {
             txtAnswer.Text = (string)de.Data.GetData(DataFormats.Text);
@@ -96,15 +103,15 @@ namespace LearnProgrammingTool
         {
             answer = answerTextBox.Text; //get the current answer text loaded from the database
 
-            //validation (warns user and stops user advancing if they haven't chosen an option)
-            if (txtAnswer.Text == "" && counter < 20)
+            //validation (warns user and stops user advancing if they haven't dragged on an option)
+            if (txtAnswer.Text == "" && !canShowScore)
             {
-                MessageBox.Show("Please choose an option", "Error");
+                MessageBox.Show("Please drag on an option", "Error");
                 return;
             }
 
             //user got question right so add 1 to their score
-            else if (txtAnswer.Text.Equals(answer) && counter < 20)
+            else if (txtAnswer.Text.Equals(answer) && !canShowScore)
             {
                 scoreAnswer = 1;
             }
@@ -118,7 +125,7 @@ namespace LearnProgrammingTool
             finalScore += scoreAnswer; //update score
             input_Output_QuestionsBindingSource.MoveNext(); //show next question 
             input_Output_AnswersBindingSource.MoveNext(); //update next answer
-            txtAnswer.Text = "";
+            txtAnswer.Text = ""; //remove dragged on option from textbox
 
             counter++; //keep track of the button clicks
             questionNumber++; //keep count of questions
@@ -127,7 +134,7 @@ namespace LearnProgrammingTool
             progress = questionNumber + "/20";
             txtQuestionNumber.Text = progress.ToString();
 
-            for (int i = 20; i < counter; i++)
+            for (int i = 20; i <= counter; i++)
             {
                 counter--; //stop keeping track of counter
                 questionNumber--; //stop keeping track of questions count
@@ -156,7 +163,7 @@ namespace LearnProgrammingTool
         private void btnCheckResults_Click(object sender, EventArgs e)
         {
             //if all questions have been answered then show the score
-            if (counter >= 20)
+            if (canShowScore)
             {
                 txtScore.Text = finalScore.ToString(); //show score
                 finalScore = reset; //reset score if user clicks on button again

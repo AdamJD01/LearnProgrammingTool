@@ -120,28 +120,31 @@
   <metadata name="lblQuestion.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <data name="txtLearning.Text" xml:space="preserve">
-    <value>A variable is a way of declaring an object to use in a program.
-In Visual Basic the word 'Dim' is used to declare an object followed by the desired name, the word 'As' and the type of variable. 
-When declaring an object name the 'camelCase' style is often used (making the first word lower case and all the other words starting with a captial letter.)
-
-There are a variety of object types, these are:
-- Boolean (true or false, also known as yes or no). An example of declaring Boolean is 'Dim isItSunny As Boolean' 
-- Byte (one numeric digit). An example of declaring a Byte is 'Dim telephoneDigit As Byte'
-- Char (one letter digit). An example of declaring a Char is 'Dim genderInital As Char'
-- Date (the day, month and year of a time in the calender). An example of declaring a Date is 'Dim customerDateOfBirth As Date'
-- Double (a large number that rounds to more than 2 decimal places). An example of declaring a Double is 'Dim massOfSun As Double'
-- Single (a small number that rounds to 2 decimal places). An example of declaring a Single is 'Dim numberOfExams As Single' 
-- String (a sentence or block of text). An example of declaring a String is 'Dim customerFeedback As String'
-
-Try the exercise below to test your knowledge of Variables.  </value>
-  </data>
-  <metadata name="lblOptions.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="answerLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="labelAnswer.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <metadata name="lblOptions.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="txtLearning.Text" xml:space="preserve">
+    <value>Input and output is a way of manipulating data within a program.
+In Visual Basic there are 4 main types of input and 2 main types of output. 
+An input is something that gets inputted or chosen from via a form control that has been placed on the form. 
+An output is something that gets displayed onto a form control via user input or a calculation within the program.
+
+The main types of input and output are:
+- CheckBox (input). Multiple squareboxes with text next to them where the user can select 1 or more options.
+- ComboBox (input). A drop down list with multiple text values where the user can only select 1 option.
+- RadioButton (input). Multiple circleboxes with text next to them where the user can only select 1 option.
+- TextBox (input). An empty space in the shape of a rectangle where the user can type something in using a keyboard.
+- .Text (output). A piece of inputted text and/or value displayed to the user.
+- .ToString (output). A block of text and/or number displayed to the user.
+
+Try the exercise below to test your knowledge of Input and Output.  </value>
+  </data>
   <metadata name="input_Output_QuestionsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>30, 56</value>
   </metadata>
@@ -160,20 +163,11 @@ Try the exercise below to test your knowledge of Variables.  </value>
   <metadata name="input_Output_QuestionsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>406, 56</value>
   </metadata>
-  <metadata name="input_Output_QuestionsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>30, 56</value>
-  </metadata>
-  <metadata name="exercisesDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="variables_QuestionsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>776, 56</value>
   </metadata>
   <metadata name="variables_QuestionsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1117, 56</value>
-  </metadata>
-  <metadata name="answerLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>88</value>

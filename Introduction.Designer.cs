@@ -42,14 +42,16 @@
             this.txtIntroduction.ReadOnly = true;
             this.txtIntroduction.Size = new System.Drawing.Size(777, 415);
             this.txtIntroduction.TabIndex = 0;
+            this.txtIntroduction.TabStop = false;
             this.txtIntroduction.Text = resources.GetString("txtIntroduction.Text");
             // 
             // frmIntroduction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 475);
+            this.ClientSize = new System.Drawing.Size(809, 460);
             this.Controls.Add(this.txtIntroduction);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmIntroduction";
             this.Text = "Introduction";
             this.ResumeLayout(false);
