@@ -9,6 +9,15 @@
     <TableUISetting Name="Variables_Answers">
       <ColumnUISettings>
         <ColumnUISetting Name="Answer">
+          <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+              <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+            </ControlSetting></ControlSettings>
+        </ColumnUISetting>
+      </ColumnUISettings>
+    </TableUISetting>
+    <TableUISetting Name="Variables_Questions">
+      <ColumnUISettings>
+        <ColumnUISetting Name="Question">
           <ControlSettings>
             <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
               <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
@@ -17,7 +26,18 @@
         </ColumnUISetting>
       </ColumnUISettings>
     </TableUISetting>
-    <TableUISetting Name="Variables_Questions">
+    <TableUISetting Name="Input&amp;Output_Answers">
+      <ColumnUISettings>
+        <ColumnUISetting Name="Answer">
+          <ControlSettings>
+            <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+              <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+            </ControlSetting>
+          </ControlSettings>
+        </ColumnUISetting>
+      </ColumnUISettings>
+    </TableUISetting>
+    <TableUISetting Name="Input&amp;Output_Questions">
       <ColumnUISettings>
         <ColumnUISetting Name="Question">
           <ControlSettings>

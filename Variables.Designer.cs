@@ -36,13 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cmbQuestion2 = new System.Windows.Forms.ComboBox();
             this.grpQuestion2 = new System.Windows.Forms.Label();
-            this.exercisesDataSet = new LearnProgrammingTool.ExercisesDataSet();
-            this.variables_QuestionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.variables_QuestionsTableAdapter = new LearnProgrammingTool.ExercisesDataSetTableAdapters.Variables_QuestionsTableAdapter();
-            this.tableAdapterManager = new LearnProgrammingTool.ExercisesDataSetTableAdapters.TableAdapterManager();
             this.questionTextBox = new System.Windows.Forms.TextBox();
-            this.variables_AnswersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.variables_AnswersTableAdapter = new LearnProgrammingTool.ExercisesDataSetTableAdapters.Variables_AnswersTableAdapter();
             this.answerTextBox = new System.Windows.Forms.TextBox();
             this.cmbQuestion = new System.Windows.Forms.ComboBox();
             this.btnNextQuestion = new System.Windows.Forms.Button();
@@ -50,16 +44,22 @@
             this.txtLearning = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtQuestionNumber = new System.Windows.Forms.TextBox();
             this.btnCheckResults = new System.Windows.Forms.Button();
+            this.txtQuestionNumber = new System.Windows.Forms.TextBox();
+            this.variables_AnswersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.exercisesDataSet = new LearnProgrammingTool.ExercisesDataSet();
+            this.variables_QuestionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.variables_QuestionsTableAdapter = new LearnProgrammingTool.ExercisesDataSetTableAdapters.Variables_QuestionsTableAdapter();
+            this.tableAdapterManager = new LearnProgrammingTool.ExercisesDataSetTableAdapters.TableAdapterManager();
+            this.variables_AnswersTableAdapter = new LearnProgrammingTool.ExercisesDataSetTableAdapters.Variables_AnswersTableAdapter();
             questionLabel = new System.Windows.Forms.Label();
             answerLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.exercisesDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.variables_QuestionsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.variables_AnswersBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.variables_AnswersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exercisesDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.variables_QuestionsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // questionLabel
@@ -124,27 +124,6 @@
             this.grpQuestion2.TabIndex = 9;
             this.grpQuestion2.Text = "Variable Types";
             // 
-            // exercisesDataSet
-            // 
-            this.exercisesDataSet.DataSetName = "ExercisesDataSet";
-            this.exercisesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // variables_QuestionsBindingSource
-            // 
-            this.variables_QuestionsBindingSource.DataMember = "Variables_Questions";
-            this.variables_QuestionsBindingSource.DataSource = this.exercisesDataSet;
-            // 
-            // variables_QuestionsTableAdapter
-            // 
-            this.variables_QuestionsTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.UpdateOrder = LearnProgrammingTool.ExercisesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.Variables_AnswersTableAdapter = null;
-            this.tableAdapterManager.Variables_QuestionsTableAdapter = this.variables_QuestionsTableAdapter;
-            // 
             // questionTextBox
             // 
             this.questionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.variables_QuestionsBindingSource, "Question", true));
@@ -154,20 +133,12 @@
             this.questionTextBox.Size = new System.Drawing.Size(180, 26);
             this.questionTextBox.TabIndex = 2;
             // 
-            // variables_AnswersBindingSource
-            // 
-            this.variables_AnswersBindingSource.DataMember = "Variables_Answers";
-            this.variables_AnswersBindingSource.DataSource = this.exercisesDataSet;
-            // 
-            // variables_AnswersTableAdapter
-            // 
-            this.variables_AnswersTableAdapter.ClearBeforeFill = true;
-            // 
             // answerTextBox
             // 
             this.answerTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.variables_AnswersBindingSource, "Answer", true));
             this.answerTextBox.Location = new System.Drawing.Point(1405, 304);
             this.answerTextBox.Name = "answerTextBox";
+            this.answerTextBox.ReadOnly = true;
             this.answerTextBox.Size = new System.Drawing.Size(100, 26);
             this.answerTextBox.TabIndex = 4;
             // 
@@ -243,15 +214,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Exercise";
             // 
-            // txtQuestionNumber
-            // 
-            this.txtQuestionNumber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.variables_QuestionsBindingSource, "Question", true));
-            this.txtQuestionNumber.Location = new System.Drawing.Point(348, 30);
-            this.txtQuestionNumber.Name = "txtQuestionNumber";
-            this.txtQuestionNumber.ReadOnly = true;
-            this.txtQuestionNumber.Size = new System.Drawing.Size(73, 26);
-            this.txtQuestionNumber.TabIndex = 12;
-            // 
             // btnCheckResults
             // 
             this.btnCheckResults.Location = new System.Drawing.Point(461, 77);
@@ -262,11 +224,52 @@
             this.btnCheckResults.UseVisualStyleBackColor = true;
             this.btnCheckResults.Click += new System.EventHandler(this.btnCheckResults_Click);
             // 
+            // txtQuestionNumber
+            // 
+            this.txtQuestionNumber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.variables_QuestionsBindingSource, "Question", true));
+            this.txtQuestionNumber.Location = new System.Drawing.Point(348, 30);
+            this.txtQuestionNumber.Name = "txtQuestionNumber";
+            this.txtQuestionNumber.ReadOnly = true;
+            this.txtQuestionNumber.Size = new System.Drawing.Size(73, 26);
+            this.txtQuestionNumber.TabIndex = 12;
+            // 
+            // variables_AnswersBindingSource
+            // 
+            this.variables_AnswersBindingSource.DataMember = "Variables_Answers";
+            this.variables_AnswersBindingSource.DataSource = this.exercisesDataSet;
+            // 
+            // exercisesDataSet
+            // 
+            this.exercisesDataSet.DataSetName = "ExercisesDataSet";
+            this.exercisesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // variables_QuestionsBindingSource
+            // 
+            this.variables_QuestionsBindingSource.DataMember = "Variables_Questions";
+            this.variables_QuestionsBindingSource.DataSource = this.exercisesDataSet;
+            // 
+            // variables_QuestionsTableAdapter
+            // 
+            this.variables_QuestionsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Input_Output_AnswersTableAdapter = null;
+            this.tableAdapterManager.Input_Output_QuestionsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = LearnProgrammingTool.ExercisesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.Variables_AnswersTableAdapter = null;
+            this.tableAdapterManager.Variables_QuestionsTableAdapter = this.variables_QuestionsTableAdapter;
+            // 
+            // variables_AnswersTableAdapter
+            // 
+            this.variables_AnswersTableAdapter.ClearBeforeFill = true;
+            // 
             // frmVariables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1277, 703);
+            this.ClientSize = new System.Drawing.Size(1274, 703);
             this.Controls.Add(this.btnNextQuestion);
             this.Controls.Add(label1);
             this.Controls.Add(this.cmbQuestion);
@@ -280,13 +283,13 @@
             this.Name = "frmVariables";
             this.Text = "Variables";
             this.Load += new System.EventHandler(this.frmVariables_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.exercisesDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.variables_QuestionsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.variables_AnswersBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.variables_AnswersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exercisesDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.variables_QuestionsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
