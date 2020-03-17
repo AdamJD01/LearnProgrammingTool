@@ -66,6 +66,7 @@ namespace LearnProgrammingTool
             }
 
             finalScore += scoreAnswer; //update score
+            txtAnswer.Text = ""; //reset answer 
             logic_QuestionsBindingSource.MoveNext(); //show next question 
             logic_AnswersBindingSource.MoveNext(); //update next answer
 
@@ -87,6 +88,7 @@ namespace LearnProgrammingTool
                     ready = "Find out score";
                     txtScore.Text = ready.ToString();
                     canShowScore = true;
+                    txtAnswer.Text = "";
                 }
 
                 //set the final question progress and show final question number to the user

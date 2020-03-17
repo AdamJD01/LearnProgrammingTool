@@ -34,12 +34,12 @@
             System.Windows.Forms.Label answerLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogic));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnCheckResults = new System.Windows.Forms.Button();
             this.questionTextBox = new System.Windows.Forms.TextBox();
             this.logic_QuestionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.exercisesDataSet = new LearnProgrammingTool.ExercisesDataSet();
             this.btnNextQuestion = new System.Windows.Forms.Button();
             this.txtAnswer = new System.Windows.Forms.TextBox();
-            this.btnCheckResults = new System.Windows.Forms.Button();
             this.txtQuestionNumber = new System.Windows.Forms.TextBox();
             this.txtScore = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -90,11 +90,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnCheckResults);
             this.groupBox2.Controls.Add(this.questionTextBox);
             this.groupBox2.Controls.Add(labelAnswer);
             this.groupBox2.Controls.Add(this.btnNextQuestion);
             this.groupBox2.Controls.Add(this.txtAnswer);
-            this.groupBox2.Controls.Add(this.btnCheckResults);
             this.groupBox2.Controls.Add(this.txtQuestionNumber);
             this.groupBox2.Controls.Add(this.txtScore);
             this.groupBox2.Controls.Add(lblQuestion);
@@ -105,6 +105,16 @@
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Exercise";
+            // 
+            // btnCheckResults
+            // 
+            this.btnCheckResults.Location = new System.Drawing.Point(474, 159);
+            this.btnCheckResults.Name = "btnCheckResults";
+            this.btnCheckResults.Size = new System.Drawing.Size(119, 60);
+            this.btnCheckResults.TabIndex = 24;
+            this.btnCheckResults.Text = "Check Results";
+            this.btnCheckResults.UseVisualStyleBackColor = true;
+            this.btnCheckResults.Click += new System.EventHandler(this.btnCheckResults_Click);
             // 
             // questionTextBox
             // 
@@ -147,15 +157,6 @@
             this.txtAnswer.Size = new System.Drawing.Size(121, 26);
             this.txtAnswer.TabIndex = 1;
             // 
-            // btnCheckResults
-            // 
-            this.btnCheckResults.Location = new System.Drawing.Point(468, 163);
-            this.btnCheckResults.Name = "btnCheckResults";
-            this.btnCheckResults.Size = new System.Drawing.Size(121, 52);
-            this.btnCheckResults.TabIndex = 12;
-            this.btnCheckResults.Text = "Check Results";
-            this.btnCheckResults.UseVisualStyleBackColor = true;
-            // 
             // txtQuestionNumber
             // 
             this.txtQuestionNumber.Cursor = System.Windows.Forms.Cursors.No;
@@ -181,7 +182,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1164, 394);
+            this.groupBox1.Size = new System.Drawing.Size(1164, 414);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Learning Section";
@@ -194,7 +195,7 @@
             this.txtLearning.Multiline = true;
             this.txtLearning.Name = "txtLearning";
             this.txtLearning.ReadOnly = true;
-            this.txtLearning.Size = new System.Drawing.Size(1122, 363);
+            this.txtLearning.Size = new System.Drawing.Size(1122, 378);
             this.txtLearning.TabIndex = 9;
             this.txtLearning.TabStop = false;
             this.txtLearning.Text = resources.GetString("txtLearning.Text");
@@ -237,7 +238,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1479, 695);
+            this.ClientSize = new System.Drawing.Size(1196, 695);
             this.Controls.Add(answerLabel);
             this.Controls.Add(this.answerTextBox);
             this.Controls.Add(this.groupBox2);
@@ -263,7 +264,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnNextQuestion;
         private System.Windows.Forms.TextBox txtAnswer;
-        private System.Windows.Forms.Button btnCheckResults;
         private System.Windows.Forms.TextBox txtQuestionNumber;
         private System.Windows.Forms.TextBox txtScore;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -276,5 +276,6 @@
         private ExercisesDataSetTableAdapters.Logic_AnswersTableAdapter logic_AnswersTableAdapter;
         private System.Windows.Forms.TextBox answerTextBox;
         private System.Windows.Forms.TextBox questionTextBox;
+        private System.Windows.Forms.Button btnCheckResults;
     }
 }

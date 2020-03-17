@@ -140,7 +140,7 @@ The sub categories of logic are mathematical and logical.
 The main types of logic are:
 - &lt; (Mathematical). Shows that a value is lower than another number.
 - &gt; (Mathematical). Shows that a value is higher than another number.
-- &lt;=/=&gt;(Mathematical). Shows that a value is lower than(left symblol)/higher than(right symbol) or equal to another number.
+- &lt;=/&gt;=(Mathematical). Shows that a value is lower than(left symblol)/higher than(right symbol) or equal to another number.
 - = (Mathematical). Used to set a value or string, can also be used for comparision. 
 - += (Mathematical). Used to quickly add a value to itself (other symbols are -=, *= and /=).
 - And (Logical). Makes a statement true if all the value criteria is met.
