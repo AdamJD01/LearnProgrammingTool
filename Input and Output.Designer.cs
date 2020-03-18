@@ -308,6 +308,8 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Input_Output_AnswersTableAdapter = this.input_Output_AnswersTableAdapter;
             this.tableAdapterManager.Input_Output_QuestionsTableAdapter = this.input_Output_QuestionsTableAdapter;
+            this.tableAdapterManager.Logic_AnswersTableAdapter = null;
+            this.tableAdapterManager.Logic_QuestionsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = LearnProgrammingTool.ExercisesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.Variables_AnswersTableAdapter = null;
             this.tableAdapterManager.Variables_QuestionsTableAdapter = null;
@@ -345,6 +347,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInputAndOutput";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

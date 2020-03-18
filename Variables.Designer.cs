@@ -261,6 +261,8 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Input_Output_AnswersTableAdapter = null;
             this.tableAdapterManager.Input_Output_QuestionsTableAdapter = null;
+            this.tableAdapterManager.Logic_AnswersTableAdapter = null;
+            this.tableAdapterManager.Logic_QuestionsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = LearnProgrammingTool.ExercisesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.Variables_AnswersTableAdapter = null;
             this.tableAdapterManager.Variables_QuestionsTableAdapter = this.variables_QuestionsTableAdapter;
@@ -284,6 +286,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmVariables";
             this.Text = "Variables";
             this.Load += new System.EventHandler(this.frmVariables_Load);
