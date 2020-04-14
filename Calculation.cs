@@ -66,8 +66,8 @@ namespace LearnProgrammingTool
             }
 
             finalScore += scoreAnswer; //update score
-            variables_QuestionsBindingSource.MoveNext(); //show next question 
-            variables_AnswersBindingSource.MoveNext(); //update next answer
+            calculation_QuestionsBindingSource.MoveNext(); //show next question 
+            calculation_AnswersBindingSource.MoveNext(); //update next answer
 
             counter++; //keep track of the button clicks
             questionNumber++; //keep count of questions
