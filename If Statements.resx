@@ -132,9 +132,6 @@
   <metadata name="ifStatements_QuestionsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>215, 17</value>
   </metadata>
-  <metadata name="ifStatements_QuestionsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>215, 17</value>
-  </metadata>
   <metadata name="exercisesDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -142,20 +139,20 @@
     <value>17, 17</value>
   </metadata>
   <data name="txtLearning.Text" xml:space="preserve">
-    <value>Input and output is a way of manipulating data within a program.
-In Visual Basic there are 4 main types of input and 2 main types of output. 
-An input is something that gets inputted or chosen from via a form control that has been placed on the form. 
-An output is something that gets displayed onto a form control via user input or a calculation within the program.
+    <value>An if statement is a way of carrying out a set of instructions if certain criteria is met.
+In Visual Basic there are 3 main types of if statements. 
+The word "If" is used to start an if statement followed by the word "Then" after the criteria. 
+The words "Else If" are used after the first if statement if there are more than one criteria followed by the word "Then".
+The word "Else" is used to set an instruction if none of the criteria is met with the words "End If" used to end the if statement.
+ 
+An example of this is:
 
-The main types of input and output are:
-- CheckBox (input). Multiple squareboxes with text next to them where the user can select 1 or more options.
-- ComboBox (input). A drop down list with multiple text values where the user can only select 1 option.
-- RadioButton (input). Multiple circleboxes with text next to them where the user can only select 1 option.
-- TextBox (input). An empty space in the shape of a rectangle where the user can type something in using a keyboard.
-- .Text (output). A piece of inputted text and/or value displayed to the user.
-- .ToString (output). A block of text and/or number displayed to the user.
+If Score = 100 Then message = "You got a perfect score"
+Else If Score &gt;= 70 And Score &lt;=99 Then message = "You have passed"
+Else message = "You have failed"
+End If
 
-Try the exercise below to test your knowledge of Input and Output.  </value>
+Try the exercise below to test your knowledge of If Statements.  </value>
   </data>
   <metadata name="ifStatements_QuestionsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>587, 17</value>

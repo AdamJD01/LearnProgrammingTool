@@ -34,14 +34,11 @@
             System.Windows.Forms.Label lblQuestion;
             System.Windows.Forms.Label answerLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIfStatements));
-            this.lblOptionF = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.questionTextBox = new System.Windows.Forms.TextBox();
             this.ifStatements_QuestionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.exercisesDataSet = new LearnProgrammingTool.ExercisesDataSet();
             this.lblOptionB = new System.Windows.Forms.Label();
-            this.lblOptionE = new System.Windows.Forms.Label();
-            this.lblOptionD = new System.Windows.Forms.Label();
             this.lblOptionC = new System.Windows.Forms.Label();
             this.btnNextQuestion = new System.Windows.Forms.Button();
             this.lblOptionA = new System.Windows.Forms.Label();
@@ -106,26 +103,12 @@
             answerLabel.TabIndex = 20;
             answerLabel.Text = "Answer:";
             // 
-            // lblOptionF
-            // 
-            this.lblOptionF.AllowDrop = true;
-            this.lblOptionF.AutoSize = true;
-            this.lblOptionF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOptionF.Location = new System.Drawing.Point(321, 150);
-            this.lblOptionF.Name = "lblOptionF";
-            this.lblOptionF.Size = new System.Drawing.Size(73, 20);
-            this.lblOptionF.TabIndex = 21;
-            this.lblOptionF.Text = ".ToString";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.questionTextBox);
             this.groupBox2.Controls.Add(lblOptions);
             this.groupBox2.Controls.Add(labelAnswer);
-            this.groupBox2.Controls.Add(this.lblOptionF);
             this.groupBox2.Controls.Add(this.lblOptionB);
-            this.groupBox2.Controls.Add(this.lblOptionE);
-            this.groupBox2.Controls.Add(this.lblOptionD);
             this.groupBox2.Controls.Add(this.lblOptionC);
             this.groupBox2.Controls.Add(this.btnNextQuestion);
             this.groupBox2.Controls.Add(this.lblOptionA);
@@ -150,7 +133,7 @@
             this.questionTextBox.Name = "questionTextBox";
             this.questionTextBox.ReadOnly = true;
             this.questionTextBox.Size = new System.Drawing.Size(304, 26);
-            this.questionTextBox.TabIndex = 24;
+            this.questionTextBox.TabIndex = 25;
             // 
             // ifStatements_QuestionsBindingSource
             // 
@@ -167,48 +150,26 @@
             this.lblOptionB.AllowDrop = true;
             this.lblOptionB.AutoSize = true;
             this.lblOptionB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOptionB.Location = new System.Drawing.Point(173, 115);
+            this.lblOptionB.Location = new System.Drawing.Point(179, 122);
             this.lblOptionB.Name = "lblOptionB";
-            this.lblOptionB.Size = new System.Drawing.Size(87, 20);
+            this.lblOptionB.Size = new System.Drawing.Size(54, 20);
             this.lblOptionB.TabIndex = 20;
-            this.lblOptionB.Text = "ComboBox";
-            // 
-            // lblOptionE
-            // 
-            this.lblOptionE.AllowDrop = true;
-            this.lblOptionE.AutoSize = true;
-            this.lblOptionE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOptionE.Location = new System.Drawing.Point(173, 150);
-            this.lblOptionE.Name = "lblOptionE";
-            this.lblOptionE.Size = new System.Drawing.Size(43, 20);
-            this.lblOptionE.TabIndex = 19;
-            this.lblOptionE.Text = ".Text";
-            // 
-            // lblOptionD
-            // 
-            this.lblOptionD.AllowDrop = true;
-            this.lblOptionD.AutoSize = true;
-            this.lblOptionD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOptionD.Location = new System.Drawing.Point(25, 150);
-            this.lblOptionD.Name = "lblOptionD";
-            this.lblOptionD.Size = new System.Drawing.Size(66, 20);
-            this.lblOptionD.TabIndex = 18;
-            this.lblOptionD.Text = "TextBox";
+            this.lblOptionB.Text = "Else If";
             // 
             // lblOptionC
             // 
             this.lblOptionC.AllowDrop = true;
             this.lblOptionC.AutoSize = true;
             this.lblOptionC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOptionC.Location = new System.Drawing.Point(321, 115);
+            this.lblOptionC.Location = new System.Drawing.Point(327, 122);
             this.lblOptionC.Name = "lblOptionC";
-            this.lblOptionC.Size = new System.Drawing.Size(99, 20);
+            this.lblOptionC.Size = new System.Drawing.Size(40, 20);
             this.lblOptionC.TabIndex = 17;
-            this.lblOptionC.Text = "RadioButton";
+            this.lblOptionC.Text = "Else";
             // 
             // btnNextQuestion
             // 
-            this.btnNextQuestion.Location = new System.Drawing.Point(230, 183);
+            this.btnNextQuestion.Location = new System.Drawing.Point(151, 190);
             this.btnNextQuestion.Name = "btnNextQuestion";
             this.btnNextQuestion.Size = new System.Drawing.Size(121, 39);
             this.btnNextQuestion.TabIndex = 16;
@@ -221,11 +182,11 @@
             this.lblOptionA.AllowDrop = true;
             this.lblOptionA.AutoSize = true;
             this.lblOptionA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOptionA.Location = new System.Drawing.Point(25, 115);
+            this.lblOptionA.Location = new System.Drawing.Point(31, 122);
             this.lblOptionA.Name = "lblOptionA";
-            this.lblOptionA.Size = new System.Drawing.Size(81, 20);
+            this.lblOptionA.Size = new System.Drawing.Size(19, 20);
             this.lblOptionA.TabIndex = 15;
-            this.lblOptionA.Text = "CheckBox";
+            this.lblOptionA.Text = "If";
             // 
             // txtAnswer
             // 
@@ -235,7 +196,7 @@
             this.txtAnswer.Name = "txtAnswer";
             this.txtAnswer.ReadOnly = true;
             this.txtAnswer.Size = new System.Drawing.Size(121, 26);
-            this.txtAnswer.TabIndex = 10;
+            this.txtAnswer.TabIndex = 23;
             // 
             // btnCheckResults
             // 
@@ -264,7 +225,7 @@
             this.txtScore.Name = "txtScore";
             this.txtScore.ReadOnly = true;
             this.txtScore.Size = new System.Drawing.Size(152, 26);
-            this.txtScore.TabIndex = 10;
+            this.txtScore.TabIndex = 24;
             // 
             // groupBox1
             // 
@@ -299,13 +260,19 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Calculation_AnswersTableAdapter = null;
             this.tableAdapterManager.Calculation_QuestionsTableAdapter = null;
+            this.tableAdapterManager.Cases_AnswersTableAdapter = null;
+            this.tableAdapterManager.Cases_QuestionsTableAdapter = null;
             this.tableAdapterManager.IfStatements_AnswersTableAdapter = this.ifStatements_AnswersTableAdapter;
             this.tableAdapterManager.IfStatements_QuestionsTableAdapter = this.ifStatements_QuestionsTableAdapter;
             this.tableAdapterManager.Input_Output_AnswersTableAdapter = null;
             this.tableAdapterManager.Input_Output_QuestionsTableAdapter = null;
             this.tableAdapterManager.Logic_AnswersTableAdapter = null;
             this.tableAdapterManager.Logic_QuestionsTableAdapter = null;
+            this.tableAdapterManager.Loops_AnswersTableAdapter = null;
+            this.tableAdapterManager.Loops_QuestionsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = LearnProgrammingTool.ExercisesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.Validation_AnswersTableAdapter = null;
+            this.tableAdapterManager.Validation_QuestionsTableAdapter = null;
             this.tableAdapterManager.Variables_AnswersTableAdapter = null;
             this.tableAdapterManager.Variables_QuestionsTableAdapter = null;
             // 
@@ -354,12 +321,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblOptionF;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblOptionB;
-        private System.Windows.Forms.Label lblOptionE;
-        private System.Windows.Forms.Label lblOptionD;
         private System.Windows.Forms.Label lblOptionC;
         private System.Windows.Forms.Button btnNextQuestion;
         private System.Windows.Forms.Label lblOptionA;

@@ -26,9 +26,6 @@ namespace LearnProgrammingTool
             lblOptionA.MouseDown += new MouseEventHandler(lblOptionA_MouseDown);
             lblOptionB.MouseDown += new MouseEventHandler(lblOptionB_MouseDown);
             lblOptionC.MouseDown += new MouseEventHandler(lblOptionC_MouseDown);
-            lblOptionD.MouseDown += new MouseEventHandler(lblOptionD_MouseDown);
-            lblOptionE.MouseDown += new MouseEventHandler(lblOptionE_MouseDown);
-            lblOptionF.MouseDown += new MouseEventHandler(lblOptionF_MouseDown);
 
             //set up drag event on textbox
             txtAnswer.AllowDrop = true;
@@ -69,21 +66,6 @@ namespace LearnProgrammingTool
         private void lblOptionC_MouseDown(object sender, EventArgs e)
         {
             DoDragDrop(lblOptionC.Text, DragDropEffects.Copy);
-        }
-
-        private void lblOptionD_MouseDown(object sender, EventArgs e)
-        {
-            DoDragDrop(lblOptionD.Text, DragDropEffects.Copy);
-        }
-
-        private void lblOptionE_MouseDown(object sender, EventArgs e)
-        {
-            DoDragDrop(lblOptionE.Text, DragDropEffects.Copy);
-        }
-
-        private void lblOptionF_MouseDown(object sender, EventArgs e)
-        {
-            DoDragDrop(lblOptionF.Text, DragDropEffects.Copy);
         }
 
         //DragDrop effect for textbox
