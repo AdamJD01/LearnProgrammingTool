@@ -63,7 +63,7 @@
             // 
             labelAnswer.AutoSize = true;
             labelAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            labelAnswer.Location = new System.Drawing.Point(439, 36);
+            labelAnswer.Location = new System.Drawing.Point(423, 39);
             labelAnswer.Name = "labelAnswer";
             labelAnswer.Size = new System.Drawing.Size(66, 20);
             labelAnswer.TabIndex = 22;
@@ -126,7 +126,7 @@
             this.questionTextBox.Location = new System.Drawing.Point(102, 33);
             this.questionTextBox.Name = "questionTextBox";
             this.questionTextBox.ReadOnly = true;
-            this.questionTextBox.Size = new System.Drawing.Size(318, 26);
+            this.questionTextBox.Size = new System.Drawing.Size(199, 26);
             this.questionTextBox.TabIndex = 25;
             // 
             // cases_QuestionsBindingSource
@@ -151,7 +151,7 @@
             // 
             // btnNextQuestion
             // 
-            this.btnNextQuestion.Location = new System.Drawing.Point(221, 99);
+            this.btnNextQuestion.Location = new System.Drawing.Point(139, 113);
             this.btnNextQuestion.Name = "btnNextQuestion";
             this.btnNextQuestion.Size = new System.Drawing.Size(121, 39);
             this.btnNextQuestion.TabIndex = 16;
@@ -163,7 +163,7 @@
             // 
             this.txtAnswer.AllowDrop = true;
             this.txtAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnswer.Location = new System.Drawing.Point(522, 33);
+            this.txtAnswer.Location = new System.Drawing.Point(506, 36);
             this.txtAnswer.Name = "txtAnswer";
             this.txtAnswer.Size = new System.Drawing.Size(121, 26);
             this.txtAnswer.TabIndex = 1;
