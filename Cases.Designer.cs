@@ -91,7 +91,7 @@
             // txtLearning
             // 
             this.txtLearning.Cursor = System.Windows.Forms.Cursors.No;
-            this.txtLearning.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLearning.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLearning.Location = new System.Drawing.Point(21, 25);
             this.txtLearning.Multiline = true;
             this.txtLearning.Name = "txtLearning";
@@ -215,7 +215,11 @@
             this.tableAdapterManager.Input_Output_QuestionsTableAdapter = null;
             this.tableAdapterManager.Logic_AnswersTableAdapter = null;
             this.tableAdapterManager.Logic_QuestionsTableAdapter = null;
+            this.tableAdapterManager.Loops_AnswersTableAdapter = null;
+            this.tableAdapterManager.Loops_QuestionsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = LearnProgrammingTool.ExercisesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.Validation_AnswersTableAdapter = null;
+            this.tableAdapterManager.Validation_QuestionsTableAdapter = null;
             this.tableAdapterManager.Variables_AnswersTableAdapter = null;
             this.tableAdapterManager.Variables_QuestionsTableAdapter = null;
             // 

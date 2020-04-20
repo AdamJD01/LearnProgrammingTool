@@ -25,8 +25,8 @@ namespace LearnProgrammingTool
 
         private void frmCases_Load(object sender, EventArgs e)
         {
-            cases_AnswersTableAdapter.Fill(this.exercisesDataSet.Cases_Answers);
-            cases_QuestionsTableAdapter.Fill(this.exercisesDataSet.Cases_Questions);
+            cases_AnswersTableAdapter.Fill(exercisesDataSet.Cases_Answers);
+            cases_QuestionsTableAdapter.Fill(exercisesDataSet.Cases_Questions);
 
             //set values of ints
             scoreAnswer = 0;
@@ -47,7 +47,7 @@ namespace LearnProgrammingTool
             answer = answerTextBox.Text; //get the current answer text loaded from the database
 
             //validation (warns user and stops user advancing if they haven't typed an answer or if the answer contains white space)
-            if ((txtAnswer.Text == "" || txtAnswer.Text.Contains(" ")) && !canShowScore)
+            if ((txtAnswer.Text == "" || txtAnswer.Text.StartsWith(" ") || txtAnswer.Text.Contains("  ") || txtAnswer.Text.EndsWith(" ")) && !canShowScore)
             {
                 MessageBox.Show("Please enter a valid answer", "Error");
                 return;
