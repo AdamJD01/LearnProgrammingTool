@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label label1;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoops));
             System.Windows.Forms.Label questionLabel;
             System.Windows.Forms.Label questionLabel1;
             System.Windows.Forms.Label answerLabel1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoops));
             this.btnCheckResults = new System.Windows.Forms.Button();
             this.txtQuestionNumber = new System.Windows.Forms.TextBox();
             this.txtScore = new System.Windows.Forms.TextBox();
@@ -42,13 +42,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtLearning = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.questionTextBox = new System.Windows.Forms.TextBox();
+            this.loops_QuestionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.exercisesDataSet = new LearnProgrammingTool.ExercisesDataSet();
             this.cmbQuestion2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.questionTextBox = new System.Windows.Forms.TextBox();
             this.answerTextBox = new System.Windows.Forms.TextBox();
             this.loops_AnswersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.exercisesDataSet = new LearnProgrammingTool.ExercisesDataSet();
-            this.loops_QuestionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.loops_QuestionsTableAdapter = new LearnProgrammingTool.ExercisesDataSetTableAdapters.Loops_QuestionsTableAdapter();
             this.tableAdapterManager = new LearnProgrammingTool.ExercisesDataSetTableAdapters.TableAdapterManager();
             this.loops_AnswersTableAdapter = new LearnProgrammingTool.ExercisesDataSetTableAdapters.Loops_AnswersTableAdapter();
@@ -58,9 +58,9 @@
             answerLabel1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.loops_AnswersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exercisesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loops_QuestionsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exercisesDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loops_AnswersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -72,9 +72,37 @@
             label1.TabIndex = 18;
             label1.Text = "Options:";
             // 
+            // questionLabel
+            // 
+            questionLabel.AutoSize = true;
+            questionLabel.Location = new System.Drawing.Point(399, 510);
+            questionLabel.Name = "questionLabel";
+            questionLabel.Size = new System.Drawing.Size(77, 20);
+            questionLabel.TabIndex = 12;
+            questionLabel.Text = "Question:";
+            // 
+            // questionLabel1
+            // 
+            questionLabel1.AutoSize = true;
+            questionLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            questionLabel1.Location = new System.Drawing.Point(51, 30);
+            questionLabel1.Name = "questionLabel1";
+            questionLabel1.Size = new System.Drawing.Size(77, 20);
+            questionLabel1.TabIndex = 12;
+            questionLabel1.Text = "Question:";
+            // 
+            // answerLabel1
+            // 
+            answerLabel1.AutoSize = true;
+            answerLabel1.Location = new System.Drawing.Point(1383, 319);
+            answerLabel1.Name = "answerLabel1";
+            answerLabel1.Size = new System.Drawing.Size(66, 20);
+            answerLabel1.TabIndex = 23;
+            answerLabel1.Text = "Answer:";
+            // 
             // btnCheckResults
             // 
-            this.btnCheckResults.Location = new System.Drawing.Point(461, 77);
+            this.btnCheckResults.Location = new System.Drawing.Point(457, 77);
             this.btnCheckResults.Name = "btnCheckResults";
             this.btnCheckResults.Size = new System.Drawing.Size(121, 52);
             this.btnCheckResults.TabIndex = 12;
@@ -85,7 +113,7 @@
             // txtQuestionNumber
             // 
             this.txtQuestionNumber.Cursor = System.Windows.Forms.Cursors.No;
-            this.txtQuestionNumber.Location = new System.Drawing.Point(348, 30);
+            this.txtQuestionNumber.Location = new System.Drawing.Point(477, 30);
             this.txtQuestionNumber.Name = "txtQuestionNumber";
             this.txtQuestionNumber.ReadOnly = true;
             this.txtQuestionNumber.Size = new System.Drawing.Size(73, 26);
@@ -103,7 +131,7 @@
             // 
             // btnNextQuestion
             // 
-            this.btnNextQuestion.Location = new System.Drawing.Point(472, 608);
+            this.btnNextQuestion.Location = new System.Drawing.Point(143, 131);
             this.btnNextQuestion.Name = "btnNextQuestion";
             this.btnNextQuestion.Size = new System.Drawing.Size(121, 52);
             this.btnNextQuestion.TabIndex = 19;
@@ -116,7 +144,9 @@
             this.cmbQuestion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbQuestion.FormattingEnabled = true;
             this.cmbQuestion.Items.AddRange(new object[] {
-            "test"});
+            "For",
+            "Do",
+            "While"});
             this.cmbQuestion.Location = new System.Drawing.Point(482, 551);
             this.cmbQuestion.Name = "cmbQuestion";
             this.cmbQuestion.Size = new System.Drawing.Size(180, 28);
@@ -136,7 +166,7 @@
             // txtLearning
             // 
             this.txtLearning.Cursor = System.Windows.Forms.Cursors.No;
-            this.txtLearning.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLearning.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLearning.Location = new System.Drawing.Point(21, 25);
             this.txtLearning.Multiline = true;
             this.txtLearning.Name = "txtLearning";
@@ -151,6 +181,7 @@
             this.groupBox2.Controls.Add(questionLabel1);
             this.groupBox2.Controls.Add(this.questionTextBox);
             this.groupBox2.Controls.Add(this.btnCheckResults);
+            this.groupBox2.Controls.Add(this.btnNextQuestion);
             this.groupBox2.Controls.Add(this.txtQuestionNumber);
             this.groupBox2.Controls.Add(this.txtScore);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -160,6 +191,26 @@
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Exercise";
+            // 
+            // questionTextBox
+            // 
+            this.questionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loops_QuestionsBindingSource, "Question", true));
+            this.questionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questionTextBox.Location = new System.Drawing.Point(143, 27);
+            this.questionTextBox.Name = "questionTextBox";
+            this.questionTextBox.ReadOnly = true;
+            this.questionTextBox.Size = new System.Drawing.Size(233, 26);
+            this.questionTextBox.TabIndex = 13;
+            // 
+            // loops_QuestionsBindingSource
+            // 
+            this.loops_QuestionsBindingSource.DataMember = "Loops_Questions";
+            this.loops_QuestionsBindingSource.DataSource = this.exercisesDataSet;
+            // 
+            // exercisesDataSet
+            // 
+            this.exercisesDataSet.DataSetName = "ExercisesDataSet";
+            this.exercisesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cmbQuestion2
             // 
@@ -186,44 +237,6 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "Dim isItRaining As _________";
             // 
-            // questionLabel
-            // 
-            questionLabel.AutoSize = true;
-            questionLabel.Location = new System.Drawing.Point(399, 510);
-            questionLabel.Name = "questionLabel";
-            questionLabel.Size = new System.Drawing.Size(77, 20);
-            questionLabel.TabIndex = 12;
-            questionLabel.Text = "Question:";
-            // 
-            // questionLabel1
-            // 
-            questionLabel1.AutoSize = true;
-            questionLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            questionLabel1.Location = new System.Drawing.Point(51, 30);
-            questionLabel1.Name = "questionLabel1";
-            questionLabel1.Size = new System.Drawing.Size(77, 20);
-            questionLabel1.TabIndex = 12;
-            questionLabel1.Text = "Question:";
-            // 
-            // questionTextBox
-            // 
-            this.questionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loops_QuestionsBindingSource, "Question", true));
-            this.questionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.questionTextBox.Location = new System.Drawing.Point(143, 27);
-            this.questionTextBox.Name = "questionTextBox";
-            this.questionTextBox.ReadOnly = true;
-            this.questionTextBox.Size = new System.Drawing.Size(180, 26);
-            this.questionTextBox.TabIndex = 13;
-            // 
-            // answerLabel1
-            // 
-            answerLabel1.AutoSize = true;
-            answerLabel1.Location = new System.Drawing.Point(1383, 319);
-            answerLabel1.Name = "answerLabel1";
-            answerLabel1.Size = new System.Drawing.Size(66, 20);
-            answerLabel1.TabIndex = 23;
-            answerLabel1.Text = "Answer:";
-            // 
             // answerTextBox
             // 
             this.answerTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loops_AnswersBindingSource, "Answer", true));
@@ -237,16 +250,6 @@
             // 
             this.loops_AnswersBindingSource.DataMember = "Loops_Answers";
             this.loops_AnswersBindingSource.DataSource = this.exercisesDataSet;
-            // 
-            // exercisesDataSet
-            // 
-            this.exercisesDataSet.DataSetName = "ExercisesDataSet";
-            this.exercisesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // loops_QuestionsBindingSource
-            // 
-            this.loops_QuestionsBindingSource.DataMember = "Loops_Questions";
-            this.loops_QuestionsBindingSource.DataSource = this.exercisesDataSet;
             // 
             // loops_QuestionsTableAdapter
             // 
@@ -268,6 +271,8 @@
             this.tableAdapterManager.Loops_AnswersTableAdapter = this.loops_AnswersTableAdapter;
             this.tableAdapterManager.Loops_QuestionsTableAdapter = this.loops_QuestionsTableAdapter;
             this.tableAdapterManager.UpdateOrder = LearnProgrammingTool.ExercisesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.Validation_AnswersTableAdapter = null;
+            this.tableAdapterManager.Validation_QuestionsTableAdapter = null;
             this.tableAdapterManager.Variables_AnswersTableAdapter = null;
             this.tableAdapterManager.Variables_QuestionsTableAdapter = null;
             // 
@@ -283,7 +288,6 @@
             this.Controls.Add(answerLabel1);
             this.Controls.Add(this.answerTextBox);
             this.Controls.Add(label1);
-            this.Controls.Add(this.btnNextQuestion);
             this.Controls.Add(this.cmbQuestion);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
@@ -298,9 +302,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.loops_AnswersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exercisesDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loops_QuestionsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exercisesDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loops_AnswersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

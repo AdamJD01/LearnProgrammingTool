@@ -120,51 +120,50 @@
   <metadata name="label1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <data name="txtLearning.Text" xml:space="preserve">
-    <value>A variable is a way of declaring an object to use in a program.
-In Visual Basic the word 'Dim' is used to declare an object followed by the desired name, the word 'As' and the type of variable. 
-When declaring an object name the 'camelCase' style is often used (making the first word lower case and all the other words starting with a captial letter.)
-
-There are a variety of object types, these are:
-- Boolean (true or false, also known as yes or no). An example of declaring Boolean is 'Dim isItSunny As Boolean' 
-- Byte (one numeric digit). An example of declaring a Byte is 'Dim telephoneDigit As Byte'
-- Char (one letter digit). An example of declaring a Char is 'Dim genderInital As Char'
-- Date (the day, month and year of a time in the calender). An example of declaring a Date is 'Dim customerDateOfBirth As Date'
-- Double (a large number that rounds to more than 2 decimal places). An example of declaring a Double is 'Dim massOfSun As Double'
-- Single (a small number that rounds to 2 decimal places). An example of declaring a Single is 'Dim numberOfExams As Single' 
-- String (a sentence or block of text). An example of declaring a String is 'Dim customerFeedback As String'
-
-Try the exercise below to test your knowledge of Variables.  </value>
-  </data>
-  <metadata name="questionLabel1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <metadata name="questionLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="questionLabel1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="loops_QuestionsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>215, 17</value>
-  </metadata>
   <metadata name="answerLabel1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="loops_AnswersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1077, 17</value>
-  </metadata>
-  <metadata name="loops_AnswersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1077, 17</value>
-  </metadata>
-  <metadata name="exercisesDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <data name="txtLearning.Text" xml:space="preserve">
+    <value>A loop is a way to repeat a line of code without having to type out every single line of a condition.
+In Visual Basic there are three main types of loop; these are "For", "Do" and "While". 
+A "For" loop performs the condition a set number of times. 
+A "Do" loops performs the condition until another condition is met. 
+A "While" loops performs the condition while a variable is true. 
+
+Examples of these loops are:
+
+For number As Integer = 1 To 10 
+message = number.ToString Next
+
+Do message = number.ToString Loop Until number &gt; 10  
+
+While number &lt;= 10 message = number.ToString End While
+
+Try the exercise below to test your knowledge of Loops.</value>
+  </data>
+  <metadata name="loops_QuestionsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>215, 17</value>
   </metadata>
   <metadata name="loops_QuestionsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>215, 17</value>
   </metadata>
   <metadata name="exercisesDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="exercisesDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="loops_AnswersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1077, 17</value>
+  </metadata>
+  <metadata name="loops_AnswersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1077, 17</value>
   </metadata>
   <metadata name="loops_QuestionsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>530, 17</value>
