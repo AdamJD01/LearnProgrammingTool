@@ -40,7 +40,7 @@
             this.txtIntroduction.Multiline = true;
             this.txtIntroduction.Name = "txtIntroduction";
             this.txtIntroduction.ReadOnly = true;
-            this.txtIntroduction.Size = new System.Drawing.Size(777, 415);
+            this.txtIntroduction.Size = new System.Drawing.Size(777, 366);
             this.txtIntroduction.TabIndex = 1;
             this.txtIntroduction.TabStop = false;
             this.txtIntroduction.Text = resources.GetString("txtIntroduction.Text");
@@ -49,7 +49,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 418);
             this.Controls.Add(this.txtIntroduction);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -123,45 +123,39 @@
   <metadata name="labelAnswer.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <data name="txtLearning.Text" xml:space="preserve">
-    <value>Input and output is a way of manipulating data within a program.
-In Visual Basic there are 4 main types of input and 2 main types of output. 
-An input is something that gets inputted or chosen from via a form control that has been placed on the form. 
-An output is something that gets displayed onto a form control via user input or a calculation within the program.
-
-The main types of input and output are:
-- CheckBox (input). Multiple squareboxes with text next to them where the user can select 1 or more options.
-- ComboBox (input). A drop down list with multiple text values where the user can only select 1 option.
-- RadioButton (input). Multiple circleboxes with text next to them where the user can only select 1 option.
-- TextBox (input). An empty space in the shape of a rectangle where the user can type something in using a keyboard.
-- .Text (output). A piece of inputted text and/or value displayed to the user.
-- .ToString (output). A block of text and/or number displayed to the user.
-
-Try the exercise below to test your knowledge of Input and Output.  </value>
-  </data>
-  <metadata name="validation_QuestionsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 161</value>
-  </metadata>
   <metadata name="lblQuestion.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="answerLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="validation_AnswersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>707, 161</value>
-  </metadata>
-  <metadata name="validation_AnswersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>707, 161</value>
-  </metadata>
-  <metadata name="exercisesDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1080, 65</value>
-  </metadata>
+  <data name="txtLearning.Text" xml:space="preserve">
+    <value>Validation is needed to stop the user entering incorrect or garbage data.
+In Visual Basic there are 3 main types of validation; these are white space, wrong input type and length. 
+Length is how long the input is, the user could have not typed enough or typed more than is required.
+
+Examples of validation are:
+
+- Whitespace: Name " " 
+- Wrong input type: Age "Twenty"
+- Length: Postcode "SA13 8TGHYZ"
+
+Try the exercise below to test your knowledge of Validation.  </value>
+  </data>
   <metadata name="validation_QuestionsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 161</value>
   </metadata>
   <metadata name="exercisesDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1080, 65</value>
+  </metadata>
+  <metadata name="exercisesDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1080, 65</value>
+  </metadata>
+  <metadata name="validation_AnswersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>707, 161</value>
+  </metadata>
+  <metadata name="validation_AnswersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>707, 161</value>
   </metadata>
   <metadata name="ifStatements_AnswersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>723, 65</value>

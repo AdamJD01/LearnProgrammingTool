@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="txtIntroduction.Text" xml:space="preserve">
-    <value>This is a tool to help you learn Visual Basic. You can go through the sections at your own pace and there is no rush to finish them. The following sections will be covered:
+    <value>To summarise you have now learned the following about Visual Basic:
 
 - Variables
 - Input and Output
@@ -128,9 +128,8 @@
 - Cases
 - Loops
 - Validation
-- Recap
 
-Each section will contain a learning section and an exercise for you to try by yourself to test your knowledge. The scores are not saved so you can try again to get a perfect score.</value>
+Hopefully you now know a lot more about Visual Basic and programming overall. Hope you enjoyed this tool and that you use your learned programming knowledge in the future.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
